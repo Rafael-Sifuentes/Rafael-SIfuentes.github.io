@@ -103,3 +103,21 @@ themeButton.addEventListener('click', () => {
 })
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+
+
+/*=============== Email Send ============================*/
+function sendEmail(){
+
+    Email.send({
+      SecureToken: "1daaf8ba-191c-4ffb-98e7-6caa33ff097e",
+      To : 'sifuentesrafael@outlook.com',
+      From : document.getElementById('email').value,
+      Subject : "Potential Client",
+      Body : "Name: " + document.getElementById('name').value
+              + "<br> Email: " + document.getElementById('email').value
+              + "<br> Message: " + document.getElementById('message').value
+  }).then(
+    message => alert("Email Sent succesfully !")
+);
+
+}
