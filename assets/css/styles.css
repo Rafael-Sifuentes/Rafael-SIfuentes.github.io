@@ -248,7 +248,7 @@
   }
 
   .nav__logo{
-    color: var(--first-color);
+    color: var(--title-color);
     font-weight: var(--font-medium);
     transition: .4s;
   }

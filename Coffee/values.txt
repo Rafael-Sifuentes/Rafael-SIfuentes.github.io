@@ -1,0 +1,12 @@
+
+
+body color : hsl(32, 58, 77) , Hex : E7C8A4
+body color light : hsl(32, 69, 88) , Hex : F5E2CA
+main color : hsl(32, 77, 65) , Hex : EAAC63
+text color : black
+
+Title font : Merriweather Bold
+Body Font : Montserrat Medium
+
+products__content
+products__card
