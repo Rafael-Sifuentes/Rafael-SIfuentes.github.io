@@ -101,3 +101,47 @@ let mixerFeatured = mixitup('.card__container', {
   }
   
   linkFeatured.forEach(l=> l.addEventListener('click', activeFeatured))
+
+/*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById('contact-form'),
+      contactName = document.getElementById('client-name'),
+      contactPhone = document.getElementById('client-phone'),
+      contactVehical = document.getElementById('vehical-type'),
+      contactServices = document.getElementById('message'),
+      message = document.getElementById('contact-message')
+
+      const sendEmail =(e) =>{
+        e.preventDefault()
+      
+        //Check if the field has a value
+        if(contactName.value === '' || contactPhone.value === '' || contactVehical.value === '' || contactServices.value === ''){
+          //Add and remove color
+          message.classList.remove('color-blue')
+          message.classList.add('color-red')
+      
+          // Show message
+          message.textContent = 'Write all the input fields ❌'
+        }else{
+          emailjs.sendForm('service_j6vt0nw','template_bbig5tq','#contact-form','dXFPVcmf0brUMMXAc')
+              .then(() =>{
+                // Show message and add color
+                message.classList.add('color-blue')
+                message.textContent = 'Message Sent ✅'
+                alert('Message sent succesfully, we will be in touch shortly !')
+      
+                //Remove message after five seconds
+                setTimeout(() =>{
+                  message.textContent = ''
+                }, 5000)
+              }, (error) =>{
+                alert('OOPS! SOMETHING HAS FAILED...', error)
+              })
+      
+              //To clear the input field
+              contactName.value = ''
+              contactPhone.value = ''
+              contactVehical.value = ''
+              contactServices.value = ''
+        }
+      }
+      contactForm.addEventListener('submit', sendEmail)

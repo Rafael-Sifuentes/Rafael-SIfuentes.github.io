@@ -53,7 +53,7 @@
     <main>
         <!--==================== HOME ====================-->
         <section class="home" id="home">
-            <img src="assets/IMAGES/home__background.png" alt="" class="home__img" id="home-img">
+            <img src="assets/IMAGES/home.jpg" alt="" class="home__img" id="home-img">
 
             <div class="home__container container grid">
                 <div class="home__data">
@@ -419,7 +419,7 @@
     
                         <div>
                             <div class="reserve__title">Call us</div>
-                            <span class="reserve__subtitle">(111) 222 - 333</span>
+                            <span class="reserve__subtitle">(936) 221 - 6263</span>
                         </div>
                     </div>
     
@@ -442,7 +442,7 @@
                     </div>
     
                     <div class="reserve__information">
-                        <i class="ri-map-pin-line reserve__icon"></i>
+                        <i class="ri-time-line reserve__icon"></i>
     
                         <div>
                             <div class="reserve__title">Service Hours</div>
@@ -452,38 +452,39 @@
                 </div>
 
 
-                <form action="" class="reserve__form grid">
+                <form action="" class="reserve__form grid" id="contact-form">
                     <div class="reserve__inputs grid">
                         <div class="reserve__content">
                             <label for="" class="reserve__lable">Name</label>
-                            <input type="text" class="reserve__input">
+                            <input type="text" name="Client_name" required class="reserve__input" id="client-name">
                         </div>
 
                         <div class="reserve__content">
-                            <label for="" class="reserve__lable">Email</label>
-                            <input type="email" class="reserve__input">
+                            <label for="" class="reserve__lable">Phone number</label>
+                            <input type="tel" name="Client_phone" placeholder="(123) 456 - 7890" required class="reserve__input" id="client-phone">
                         </div>
 
                         <div class="reserve__content">
-                            <label for="" class="reserve__lable">Vehical</label>
-                            <input type="text" class="reserve__input">
+                            <label for="" class="reserve__lable">Vehical Type</label>
+                            <input type="text" name="Vehical_type" placeholder="Example. Dodge Challenger" required class="reserve__input" id="vehical-type">
                         </div>
 
                         <div class="reserve__content">
                             <label for="" class="reserve__lable">What services would you like?</label>
-                            <textarea name="" id="message" cols="0" rows="7" class="reserve__info"></textarea>
+                            <textarea name="Services_wanted" placeholder="See Services section for details" required id="message" cols="0" rows="7" class="reserve__info"></textarea>
                         </div>
 
+                        <p class="contact__message" id="contact-message"></p>
+
                         <div>
-                            <a href="#" class="button">
+                            <button class="button" type="submit">
                                 Reserve Spot <i class="ri-send-plane-line button__icon"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </form>
             </div>
         </section>
-        <!--==================== PRODUCTS USED ====================-->
     </main>
 
     <!--==================== FOOTER ====================-->
@@ -579,6 +580,8 @@
     <script src="assets/js/swiper-bundle.js"></script>
 
     <script src="assets/js/scrollreveal.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script src="assets/js/main.js"></script>
 </body>
