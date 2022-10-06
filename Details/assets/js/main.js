@@ -145,3 +145,30 @@ const contactForm = document.getElementById('contact-form'),
         }
       }
       contactForm.addEventListener('submit', sendEmail)
+
+/*=============== SCROLL REVEAL JS ===============*/
+const sr = ScrollReveal({
+  distance: '60px',
+  duration: 2800,
+  // reset: true,
+})
+
+sr.reveal(`.home__data, .home__social-link, .home__info,
+            .work__container, .card__item`,{
+  origin: 'top',
+  interval: 100,
+})
+
+sr.reveal(`.about__data, .reserve__information`,{
+  origin: 'left',
+})
+
+sr.reveal(`.about__img-overlay, .reserve__content`,{
+  origin: 'right',
+  interval: 100,
+})
+
+sr.reveal(`.card__content`,{
+  origin: 'bottom',
+  interval: 100,
+})
