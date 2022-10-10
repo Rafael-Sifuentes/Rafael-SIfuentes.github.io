@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/IMAGES/cup.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="assets/css/main.css">
     <title>Standpipe Coffee</title>
 </head>
@@ -42,11 +42,18 @@
                         </li>
 
                         <li class="nav__item">
+                            <a href="#catering" class="nav__link">
+                                <i class="ri-truck-line"></i>
+                                <span>Catering</span>
+                            </a>
+                        </li>
+
+                        <!-- <li class="nav__item">
                             <a href="#order" class="nav__link">
                                 <i class="ri-map-pin-2-line"></i>
                                 <span>Order</span>
                             </a>
-                        </li>
+                        </li> -->
                         
 
                     </ul>
@@ -80,8 +87,8 @@
                 </div>
 
                 <div class="home__images">
-                    <img src="assets/IMAGES/home2.png" alt="Home image">
-                    <img src="assets/IMAGES/home1.png" alt="Home image">
+                    <img src="assets/IMAGES/home2.png" alt="Home image" class="img1">
+                    <img src="assets/IMAGES/home1.png" alt="Home image" class="img2">
                 </div>
             </div>
         </section>
@@ -92,7 +99,7 @@
                 Seasonal Picks
             </h2>
 
-            <p class="section__subtitle">
+            <p class="section__subtitle container">
                 swipe through to see some of our station favorites
             </p>
             
@@ -106,8 +113,8 @@
                                 <img src="assets/IMAGES/home1.png" alt="image gallery" class="gallery__img">
     
                                 <div class="gallery__data">
-                                    <h3 class="gallery__title">Something here</h3>
-                                    <span class="gallery__subtitle">something about the something here</span>
+                                    <h3 class="gallery__title">Item here</h3>
+                                    <span class="gallery__subtitle">Description of the item here</span>
                                 </div>
                             </article>
                         </div>
@@ -117,8 +124,8 @@
                                 <img src="assets/IMAGES/home2.png" alt="image gallery" class="gallery__img">
     
                                 <div class="gallery__data">
-                                    <h3 class="gallery__title">Something here</h3>
-                                    <span class="gallery__subtitle">something about the something here</span>
+                                    <h3 class="gallery__title">Item here</h3>
+                                    <span class="gallery__subtitle">Description of the item here</span>
                                 </div>
                             </article>
                         </div>
@@ -128,8 +135,8 @@
                                 <img src="assets/IMAGES/lunch1.png" alt="image gallery" class="gallery__img">
     
                                 <div class="gallery__data">
-                                    <h3 class="gallery__title">Something here</h3>
-                                    <span class="gallery__subtitle">something about the something here</span>
+                                    <h3 class="gallery__title">Item here</h3>
+                                    <span class="gallery__subtitle">Description of the item here</span>
                                 </div>
                             </article>
                         </div>
@@ -139,8 +146,8 @@
                                 <img src="assets/IMAGES/bakery2.png" alt="image gallery" class="gallery__img">
     
                                 <div class="gallery__data">
-                                    <h3 class="gallery__title">Something here</h3>
-                                    <span class="gallery__subtitle">something about the something here</span>
+                                    <h3 class="gallery__title">Item here</h3>
+                                    <span class="gallery__subtitle">Description of the item here</span>
                                 </div>
                             </article>
                         </div>
@@ -365,8 +372,53 @@
             </div>
         </section>
 
+        <!--==================== CATERING PAGE ====================-->
+        <section class="contact section" id="catering">
+            <h2 class="section__title">
+                We offer Catering!
+            </h2>
+            <p class="section__subtitle container">
+                Have questions? Want to place an order?
+                Reach out using the form below. <br>
+                Our staff will be in contact within 24 hours!
+            </p>
+
+            <div class="contact__container container grid">
+                
+
+                <div class="contact__content">
+                    <h3 class="contact__title">Lets get in touch</h3>
+
+                    <form onsubmit="sendEmail(); reset(); return false;" action="" class="contact__form">
+                        <div class="contact__from-div">
+                            <label for="" class="contact__form-tag">Name</label>
+                            <input type="text" placeholder="Full Name" required class="contact__form-input" id="name">
+                        </div>
+
+                        <div class="contact__from-div">
+                            <label for="" class="contact__form-tag">Phone</label>
+                            <input type="tel" placeholder="(123) 456-7890" required class="contact__form-input" id="phone">
+                        </div>
+
+                        <div class="contact__from-div">
+                            <label for="" class="contact__form-tag">Mail</label>
+                            <input type="email" placeholder="Your Email Here" required class="contact__form-input" id="email">
+                        </div>
+
+                        <div class="contact__from-div contact__form-area">
+                            <label for="" class="contact__form-tag">Message</label>
+                            <textarea name="" id="message" cols="30" rows="10" placeholder="A brief description of the event" required class="contact__form-input"></textarea>
+                        </div>
+
+                        <button type="submit" class="button">Send Message <i class='bx bxs-send' ></i></button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
         <!--==================== ORDER PAGE ====================-->
-        <section class="order section" id="order">
+        <!-- <section class="order section" id="order">
             <div class="order__container container grid">
 
                 <div>
@@ -436,7 +488,7 @@
                 
             </div>
             
-        </section>
+        </section> -->
 
         <div class="pageLogo">
             <img src="assets/IMAGES/coffeeLogo.png" alt="">
@@ -472,15 +524,15 @@
                     <ul class="footer__links">
 
                         <li>
-                            <a href="#" class="footer__link">Shop</a>
+                            <a href="#menu" class="footer__link">Sesonal</a>
                         </li>
 
                         <li>
-                            <a href="#" class="footer__link">Catagory</a>
+                            <a href="#catering" class="footer__link">Catering</a>
                         </li>
 
                         <li>
-                            <a href="#" class="footer__link">Menu</a>
+                            <a href="#products" class="footer__link">Menu</a>
                         </li>
 
                     </ul>
@@ -522,7 +574,7 @@
             </span>
 
             <a href="#" class="footer__privacy">
-                Terms & Conditions
+                *EXAMPLE WEBSITE*
             </a>
         </div>
     </footer>
@@ -533,13 +585,13 @@
     </a>
     
     <!--=============== SCROLLREVEAL ===============-->
-    <script src=""></script>
+    <script src="assets/javaScript/scrollreveal.min.js"></script>
 
     <!--=============== MIXITUP FILTER ===============-->
     <script src="assets/javaScript/mixitup.min.js"></script>
 
     <!--=============== SWIPER JS ===============-->
-    <script src="assets/javaScript/swiper-bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/javaScript/main.js"></script>

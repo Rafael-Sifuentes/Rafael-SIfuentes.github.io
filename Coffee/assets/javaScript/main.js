@@ -90,7 +90,31 @@ window.addEventListener('scroll', scrollUp)
 
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  distance: '60px',
+  duration: 2800,
+  // reset: true,
+})
 
+sr.reveal(`.home__data`,{
+  origin: 'top'
+})
+
+sr.reveal(`.img1`,{
+  origin: 'right',
+  interval: 100,
+})
+
+sr.reveal(`.img2`,{
+  origin: 'left',
+  interval: 150
+})
+
+sr.reveal(`.nav__item`,{
+  origin: 'bottom',
+  interval: 100
+})
+/*=============== SEND EMAIL ===============*/
 function sendEmail(){
 
   Email.send({
