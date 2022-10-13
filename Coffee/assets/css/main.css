@@ -603,6 +603,11 @@ img{
     height: 4rem;
   }
 
+  .contact__form-input::placeholder{
+    color: var(--text-color);
+    opacity: .7;
+  }
+
   .contact__form-input{
     position: absolute;
     top: 0;
