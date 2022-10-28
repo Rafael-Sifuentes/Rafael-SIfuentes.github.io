@@ -103,7 +103,31 @@ themeButton.addEventListener('click', () => {
 })
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  distance: '60px',
+  duration: 2800,
+  // reset: true, 
+})
 
+sr.reveal(`.home__greeting, .home__name, .home__education, .skills__content, .work__card`,{
+  origin: 'top',
+  interval: 100,
+})
+
+sr.reveal(`.nav__list, .home__buttons, .home__handle, .home__img,
+            .section__title, .section__subtitle`,{
+  origin: 'bottom',
+  interval: 100
+})
+
+sr.reveal(`.home__social-link, .home__social, .box-one`,{
+  origin: 'left',
+  interval: 100
+})
+
+sr.reveal(`.home__scroll, .box-two`,{
+  origin: 'right'
+})
 
 /*=============== Email Send ============================*/
 const contactForm = document.getElementById('contact-form'),
