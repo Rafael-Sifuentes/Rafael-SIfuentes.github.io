@@ -12,11 +12,12 @@
         Pink: hsl(356, 66%, 75%)
         Teal: hsl(174, 63%, 62%)
         Orange: 17
+        hsl(213, 85%, 3%)
   */
 
-  --first-hue: 17;
-  --sat: 90%;
-  --lig: 72%;
+  --first-hue: 205;
+  --sat: 88%;
+  --lig: 62%;
   --second-hue: 219;
 
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
@@ -24,8 +25,8 @@
   --title-color: hsl(var(--second-hue), 15%, 95%);
   --text-color: hsl(var(--second-hue), 8%, 75%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
-  --body-color: hsl(var(--second-hue), 48%, 1%);
-  --container-color: hsl(var(--second-hue), 32%, 12%);
+  --body-color: hsl(var(--second-hue), 85%, 3%);
+  --container-color: hsl(var(--second-hue), 15%, 12%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -126,10 +127,10 @@
   
   /*========== Variables Light theme ==========*/
   body.light-theme{
-  --title-color: hsl(var(--second-hue), 15%, 15%);
-  --text-color: hsl(var(--second-hue), 8%, 35%);
-  --body-color: hsl(var(--second-hue), 100%, 99%);
-  --container-color: #fff;
+  --title-color: hsl(var(--first-hue), 65%, 28%);
+  --text-color: hsl(var(--first-hue), 64%, 20%);
+  --body-color: hsl(var(--first-hue), 100%, 99%);
+  --container-color: rgb(222, 222, 222);
 
   }
   
@@ -140,6 +141,23 @@
 
   .light-theme .scroll-header{
     box-shadow: 0 2px 4px hsla(0, 0%, 1%, .1);
+    background-color: var(--body-color);
+  }
+
+  .light-theme .circle{
+    border: 12px dashed var(--title-color);
+    opacity: .4;
+    display: none;
+  }
+
+  .light-theme .circle-2{
+    border: 8px dotted var(--title-color);
+    display: none;
+  }
+
+  .light-theme .circle-3{
+    border: 8px dotted var(--title-color);
+    display: none;
   }
 
   .light-theme .nav__menu{
@@ -238,7 +256,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--body-color);
     z-index: var(--z-fixed);
     transition: .4s; /* for light mode animation */
   }
@@ -256,6 +273,10 @@
     transition: .4s;
   }
 
+  .nav__logo span{
+    color: var(--first-color);
+  }
+
   .nav__logo:hover{
     color: var(--first-color-alt);
   }
@@ -263,11 +284,11 @@
   .nav__menu{
     position: fixed;
     bottom: 1rem;
-    background-color: hsla(var(--second-hue), 32%, 16%, .8);
+    background-color: hsla(var(--second-hue), 12%, 16%, .8);
     width: 90%;
     border-radius: 4rem;
     padding: 1rem 2.25rem;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     transition: .4s; /* for light mode animation */
   }
 
@@ -289,14 +310,68 @@
   .active-link{
     color: var(--first-color);
     transition: .3s;
+    font-size: 1.5rem;
   }
   
   /* Change background header */
   .scroll-header{
     box-shadow: 0 4px 4px hsla(0, 0%, 4%, .3);
+    background-color: hsla(var(--second-hue), 85%, 3%, .9);
   }
   
   /*=============== HOME ===============*/
+  .circle{
+    position: absolute;
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    border: 10px dashed var(--first-color-alt);
+    opacity: .25;
+    animation: spin 20s infinite linear;
+    z-index: -1;
+    transition: .3s;
+  }
+
+  .circle-2{
+    position: absolute;
+    height: 550px;
+    width: 550px;
+    border-radius: 50%;
+    border: 8px dotted var(--first-color-alt);
+    opacity: .2;
+    animation: spin 23s infinite linear reverse;
+    z-index: -1;
+    transition: .3s;
+  }
+
+  .circle-3{
+    position: absolute;
+    right: 0;
+    height: 550px;
+    width: 550px;
+    border-radius: 50%;
+    border: 8px dotted var(--first-color-alt);
+    opacity: .1;
+    animation: spin 23s infinite linear ;
+    z-index: -1;
+    transition: .3s;
+  }
+
+  .circle:hover{
+    border: 10px dotted var(--first-color);
+  }
+
+  @keyframes spin {
+
+    0%{
+      transform: rotate(0);
+    }
+
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+
   .home__container{
     position: relative;
     row-gap: 4.5rem;
@@ -305,6 +380,7 @@
 
   .home__data{
     text-align: center;
+    z-index: 5;
   }
 
   .home__greeting,
@@ -345,7 +421,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .home__buttons{
@@ -358,6 +434,7 @@
   .home__social,
   .home__scroll{
     position: absolute;
+    z-index: 10;
   }
 
   .home__social{
