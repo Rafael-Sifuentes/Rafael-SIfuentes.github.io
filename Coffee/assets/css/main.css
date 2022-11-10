@@ -130,6 +130,11 @@ img{
     font-weight: var(--font-medium);
     transition: .4s;
   }
+
+  .italic{
+    font-style: italic;
+    padding-top: .5rem;
+  }
   
   .main {
     overflow: hidden; /* For animation ScrollReveal */
@@ -528,6 +533,7 @@ img{
     right: 1rem;
     top: -1.25rem;
     box-shadow: 0 4px 12px hsla(206, 4%, 4%, 0);
+    cursor: pointer;
   }
 
   .products__card:hover .products__img{
@@ -560,13 +566,13 @@ img{
   }
 
   .services__modal-title{
-    font-size: var(--h2-font-size);
+    font-size: var(--h1-font-size);
     color: var(--main-color);
     margin-bottom: 1rem;
   }
 
   .services__modal-description{
-    font-size: var(--normal-font-size);
+    font-size: var(--h2-font-size);
     color: var(--bg-color-light);
     margin-bottom: 2rem;
   }
@@ -592,7 +598,7 @@ img{
   }
 
   .services__modal-info{
-    font-size: var(--small-font-size);
+    font-size: var(--normal-font-size);
   }
 
   .services__modal-close{
@@ -720,9 +726,6 @@ img{
   .contact__form-area textarea{
     resize: none;
   }
-
-  
-  /* Swiper class */
   
   /*=============== ORDER ========================================================================*/
   .order__container{
@@ -1007,6 +1010,10 @@ img{
     .order__buttons{
       grid-template-columns: repeat(2, max-content);
       justify-content: center;
+    }
+
+    .services__modal-content{
+      width: 450px;
     }
 
     .footer__content{
