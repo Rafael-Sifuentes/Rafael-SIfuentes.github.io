@@ -107,6 +107,7 @@ img{
   
   .section__title {
     font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
     text-align: center;
     margin-bottom: 1rem;
   }
@@ -522,6 +523,7 @@ img{
     padding: .625rem;
     display: inline-flex;
     font-size: 1.25rem;
+    font-weight: 500;
     position: absolute;
     right: 1rem;
     top: -1.25rem;
@@ -530,6 +532,82 @@ img{
 
   .products__card:hover .products__img{
     transform: translateY(-.25rem);
+  }
+
+  /* Services modal */
+  .services__modal{
+    position: fixed;
+    inset: 0;
+    padding: 2rem 1rem;
+    display: grid;
+    place-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
+    z-index: 10;
+  }
+
+  .services__modal-content{
+    position: relative;
+    background-color: var(--text-color);
+    padding: 4.5rem 1.5rem 2.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .services__modal-title,
+  .services__modal-description{
+    text-align: center;
+  }
+
+  .services__modal-title{
+    font-size: var(--h2-font-size);
+    color: var(--main-color);
+    margin-bottom: 1rem;
+  }
+
+  .services__modal-description{
+    font-size: var(--normal-font-size);
+    color: var(--bg-color-light);
+    margin-bottom: 2rem;
+  }
+
+  .services__modal-info{
+    color: var(--bg-color-light);
+  }
+
+  .services__modal-list{
+    display: grid;
+    row-gap: .75rem;
+  }
+
+  .services__modal-item{
+    display: flex;
+    align-items: flex-start;
+    column-gap: .5rem;
+  }
+
+  .services__modal-icon{
+    font-size: 1.5rem;
+    color: var(--first-color);
+  }
+
+  .services__modal-info{
+    font-size: var(--small-font-size);
+  }
+
+  .services__modal-close{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    cursor: pointer;
+  }
+  
+  /*Active modal*/
+  .active-modal{
+    opacity: 1;
+    visibility: visible;
   }
 
   .active-featured{
