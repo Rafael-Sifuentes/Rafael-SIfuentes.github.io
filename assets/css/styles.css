@@ -15,10 +15,11 @@
         hsl(213, 85%, 3%)
   */
 
-  --first-hue: 205;
+  --first-hue: 155;
   --sat: 88%;
   --lig: 62%;
   --second-hue: 219;
+  --third-hue: 220;
 
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
   --first-color-alt: hsl(var(--first-hue), var(--sat), 68%); /* -4% */
@@ -127,9 +128,10 @@
   
   /*========== Variables Light theme ==========*/
   body.light-theme{
-  --title-color: hsl(var(--first-hue), 65%, 28%);
-  --text-color: hsl(var(--first-hue), 64%, 20%);
-  --body-color: hsl(var(--first-hue), 100%, 99%);
+  --first-color: hsl(var(--third-hue), var(--sat), 30%);
+  --title-color: hsl(var(--third-hue), 65%, 18%);
+  --text-color: hsl(var(--third-hue), 64%, 10%);
+  --body-color: hsl(var(--third-hue), 100%, 99%);
   --container-color: rgb(222, 222, 222);
 
   }
@@ -179,7 +181,6 @@
 
   .light-theme .home__social-link,
   .light-theme .home__scroll,
-  .light-theme .button,
   .light-theme .button:hover,
   .light-theme .active-work,
   .light-theme .footer__title,
@@ -268,12 +269,14 @@
   }
 
   .nav__logo{
+    font-family: var(--title-font);
     color: var(--title-color);
     font-weight: var(--font-medium);
     transition: .4s;
   }
 
   .nav__logo span{
+    font-family: var(--body-font);
     color: var(--first-color);
   }
 
@@ -338,9 +341,9 @@
     width: 550px;
     border-radius: 50%;
     border: 8px dotted var(--first-color-alt);
-    opacity: .2;
+    opacity: .07;
     animation: spin 23s infinite linear reverse;
-    z-index: -1;
+    z-index: -2;
     transition: .3s;
   }
 
@@ -350,11 +353,19 @@
     height: 550px;
     width: 550px;
     border-radius: 50%;
-    border: 8px dotted var(--first-color-alt);
+    border: 8px double var(--first-color-alt);
     opacity: .1;
     animation: spin 23s infinite linear ;
     z-index: -1;
     transition: .3s;
+  }
+
+  .box{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: var(--body-color);
+    left: 25%;
   }
 
   .circle:hover{
@@ -422,6 +433,13 @@
     align-items: flex-end;
     justify-content: center;
     /* overflow: hidden; */
+  }
+
+  .light-theme .home__handle{
+    background: linear-gradient(180deg,
+                hsla(var(--third-hue), var(--sat), var(--lig), 1),
+                hsla(var(--third-hue), var(--sat), var(--lig), .2)
+    );
   }
 
   .home__buttons{
@@ -778,6 +796,10 @@
     background-color: var(--first-color);
     color: var(--body-color);
   }
+
+  .light-theme .active-work{
+    color: var(--body-color);
+  }
   
   
   /*=============== CONTACT ===============*/
@@ -912,14 +934,27 @@
     color: var(--body-color);
   }
 
+  .light-theme .footer__title,
+  .light-theme .footer__link{
+    color: var(--body-color);
+  }
+
   .footer__title{
     text-align: center;
     margin-bottom: 1rem;
   }
 
+  .footer__title span{
+    font-size: var(--normal-font-size);
+  }
+
   .footer__sub{
     color: var(--body-color);
     margin-bottom: 1rem;
+  }
+
+  .light-theme .footer__sub{
+    color: var(--body-color);
   }
 
   .footer__list{
@@ -944,12 +979,20 @@
     display: inline-flex;
   }
 
+  .light-theme .footer__social-link{
+    background-color: var(--body-color);
+  }
+
   .footer__copy{
     display: block;
     margin-top: 4.5rem;
     color: var(--container-color);
     text-align: center;
     font-size: var(--smaller-font-size);
+  }
+
+  .light-theme .footer__copy{
+    color: var(--body-color);
   }
   
   /*=============== SCROLL BAR ===============*/
