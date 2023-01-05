@@ -57,11 +57,14 @@ themeButton.addEventListener('click', () => {
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
-    duration: '2500',
+    duration: '2000',
     delay: 400,
 })
 
-sr.reveal(`.profile__border`)
+sr.reveal(`.profile__border, .filters__content, .projects__card, skills__area`)
 sr.reveal(`.profile__name`, {delay: 500})
-sr.reveal(`profile__profession`)
-sr.reveal(`profile__social`)
+sr.reveal(`.profile__profession`, {delay: 600})
+sr.reveal(`.profile__social-link`, {interval: 100})
+sr.reveal(`.profile__info-group`, {delay: 700, origin: 'bottom'})
+sr.reveal(`.button.opposite`, {origin: 'left'})
+sr.reveal(`.button.button__small`, {origin: 'right', interval: 100})

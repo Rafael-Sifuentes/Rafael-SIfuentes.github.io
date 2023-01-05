@@ -218,7 +218,7 @@ body.dark-theme{
     font-size: var(--smaller-font-size);
     font-weight: 500;
     color: var(--text-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.75rem;
 }
 
 .profile__profession span{
@@ -228,11 +228,11 @@ body.dark-theme{
 .profile__social{
     display: flex;
     justify-content: center;
-    column-gap: .75rem;
+    column-gap: 2rem;
 }
 
 .profile__social-link{
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--title-color);
     transition: .3s;
 }
