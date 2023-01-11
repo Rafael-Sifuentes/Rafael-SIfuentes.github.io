@@ -214,10 +214,18 @@ body.dark-theme{
     font-size: var(--h2-font-size);
 }
 
-.profile__profession{
+.profile__profession,
+.profile__email{
     font-size: var(--smaller-font-size);
     font-weight: 500;
     color: var(--text-color);
+}
+
+.profile__profession{
+    margin-bottom: .3rem;
+}
+
+.profile__email{
     margin-bottom: 1.75rem;
 }
 
