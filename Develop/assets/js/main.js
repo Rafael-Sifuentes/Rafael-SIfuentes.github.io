@@ -62,7 +62,7 @@ const sr = ScrollReveal({
 })
 
 sr.reveal(`.profile__border, .filters__content, .projects__card, skills__area`)
-sr.reveal(`.profile__name`, {delay: 500})
+sr.reveal(`.profile__name, .profile__email`, {delay: 500})
 sr.reveal(`.profile__profession`, {delay: 600})
 sr.reveal(`.profile__social-link`, {interval: 100})
 sr.reveal(`.profile__info-group`, {delay: 700, origin: 'bottom'})
