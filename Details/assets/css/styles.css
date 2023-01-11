@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
 
 /*=============== VARIABLES CSS ===============*/
@@ -9,16 +10,16 @@
   
     /*========== Colors ==========*/
 
-    --main-color: hsl(29, 100%, 53%);
-    --main-color-alt: hsl(29, 90%, 42%);
-    --body-color: hsl(0, 0%, 0%);
-    --container-color: #151515;
+    --main-color: hsl(202, 100%, 50%);
+    --main-color-alt: hsl(215, 100%, 33%);
+    --body-color: hsl(220, 100%, 5%);
+    --container-color: #0d1c30;
     --text-color: #fff;
     --text-color-alt: hsl(0, 0%, 0%);
   
     /*========== Font and typography ==========*/
     --title-font: 'Syne';
-    --body-font: 'Space Mono';
+    --body-font: 'Open sans';
     --biggest-font-size: 2.5rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
@@ -137,6 +138,7 @@
     max-width: 968px;
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
+    overflow-x: hidden;
   }
 
   .grid{
@@ -174,7 +176,7 @@
   }
 
   .nav__toggle{
-    font-size: var(--h1-font-size);
+    font-size: 2rem;
     cursor: pointer;
   }
 
@@ -586,7 +588,8 @@
     content: '';
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 4px;
+    border-radius: 2px;
     background-color: var(--main-color);
     margin-bottom: var(--mb-1);
   }
@@ -911,6 +914,10 @@
 
     .about__title{
       margin-bottom: var(--mb-1-5);
+    }
+
+    .about__description-1{
+      text-align: initial;
     }
 
     .about__description-2{
