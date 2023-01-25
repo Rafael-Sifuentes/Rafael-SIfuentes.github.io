@@ -12,6 +12,7 @@
 
     --main-color: hsl(202, 100%, 50%);
     --main-color-alt: hsl(215, 100%, 33%);
+    --second-color: hsl(29, 100%, 50%);
     --body-color: hsl(220, 100%, 5%);
     --container-color: #0d1c30;
     --text-color: #fff;
@@ -302,7 +303,7 @@
   }
 
   .home__data-title span{
-    color: var(--main-color);
+    color: var(--second-color);
   }
 
   .home__social{
@@ -355,7 +356,7 @@
 
   .button{
     display: inline-block;
-    background-color: var(--main-color);
+    background-color: var(--second-color);
     color: var(--body-color);
     padding: 1rem 2rem;
     font-weight: var(--font-bold);
@@ -531,7 +532,7 @@
   }
 
   .card__item:hover{
-    background-color: var(--main-color);
+    background-color: var(--second-color);
     color: black;
     transition: .4s;
   }
