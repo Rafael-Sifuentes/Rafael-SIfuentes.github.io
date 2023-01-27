@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@400;500;700&display=swap');
+
+:root{
+    --header-height: 3.5rem;
+
+    --body-color: hsl(0 , 0%, 0%);
+    --text-color: hsl(0, 0%, 100%);
+    --container-color: hsl(0, 1%, 21%);
+    --main-color: hsl(28, 56%, 66%);
+
+    --title-font: 'Merriweather';
+    --body-font: 'Montserrat';
+
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .983rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    --z-fixed: 10;
+}
+
+@media screen and (min-width: 1124px){
+    :root{
+        --biggest-font-size: 4.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,h2,h3{
+    color: var(--text-color);
+    font-family: var(--title-font);
+    font-weight: var(--font-medium);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES =======================================================*/
+.container{
+    max-width: 1024px;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section{
+    z-index: 1;
+    height: 100vh;
+}
+
+.section__title{
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+    text-align: center;
+    margin-bottom: .75rem;
+}
+
+.section__title-line{
+    position: relative;
+}
+
+.section__title-line::before{
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--main-color);
+}
+
+.button{
+    display: inline-block;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-family: var(--body-color);
+    padding: .75rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+    transition: .4s;
+}
+
+.main{
+    overflow: hidden;
+}
+
+/*=============== HEADER & NAV ===============================================================*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: var(--z-fixed);
+    transition: .4s;
+}
+
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo{
+    display: grid;
+    text-align: center;
+    gap: .3rem;
+}
+
+.nav__logo{
+    color: var(--text-color);
+    font-weight: var(--font-semi-bold);
+    font-family: var(--title-font);
+    font-size: var(--h2-font-size);
+    margin-top: 2rem;
+}
+
+.est{
+    color: var(--main-color);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-regular);
+    font-family: var(--title-font);
+}
+
+.active-link{
+    color: var(--main-color);
+}
+
+@media screen and (max-width: 1023px){
+    .nav__menu{
+        position: fixed;
+        bottom: 1.7rem;
+        background-color: hsla(0, 1%, 21%, .5);
+        backdrop-filter: blur(15px);
+        width: 85%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        padding: 1.5rem 2.8rem;
+        border-radius: 1.4rem;
+    }
+
+    .nav__logo span{
+        font-size: var(--small-font-size);
+        text-align: center;
+    }
+
+    .nav__list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__link{
+        color: var(--text-color);
+        font-weight: var(--font-medium);
+        display: grid;
+        justify-items: center;
+        row-gap: .25rem;
+    }
+
+    .nav__link i{
+        font-size: 1.65rem;
+    }
+
+    .nav__link span{
+        font-size: .688rem;
+        display: none;
+    }
+}
+
+/*=============== HOME ========================================================================*/
+.home__img-container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: -2;
+}
+
+.home__img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: blur(2px);
+}
+
+.home__container{
+    padding: 2rem 0 1rem;
+    row-gap: 5rem;
+}
+
+.home__data{
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.home__title{
+    font-size: 1.55rem;
+    font-weight: var(--font-bold);
+}
+
+.home__info{
+    display: block;
+}
+
+.hours__open{
+    font-family: var(--title-font);
+    font-weight: var(--font-regular);
+    font-size: var(--small-font-size);
+}
+
+.open__days{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.day{
+    font-size: var(--h2-font-size);
+    font-family: var(--title-font);
+    padding: .5rem 1.5rem 1rem 0;
+}
+
+.line{
+    position: relative;
+}
+
+.line::after{
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 2px;
+    background-color: var(--main-color);
+    margin-left: .5rem;
+}
+
+.home__button{
+    color: var(--body-color);
+    font-family: var(--title-font);
+    font-weight: var(--font-bold);
+    font-size: var(--h2-font-size);
+    padding: 1.2rem 1.5rem;
+}
+
+.social__group{
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.social__cta{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-regular);
+}
+
+.home__social{
+    position: absolute;
+    display: flex;
+    width: 50%;
+    max-width: 420px;
+    margin-top: 1.5rem;
+    justify-content: space-between;
+    /* background-color: var(--main-color); */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.home__social-link{
+    height: 3.5rem;
+    width: 3.5rem;
+    padding: .5rem;
+    background-color: var(--main-color);
+    color: var(--body-color);
+    border-radius: 50%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.home__social-icon{
+    font-size: 2rem;
+}
