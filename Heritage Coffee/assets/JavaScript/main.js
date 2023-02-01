@@ -21,3 +21,25 @@ window.addEventListener('scroll', scrollActive)
 
 
 
+let container = document.querySelector('.card__container')
+var mixer;
+
+if(container){
+  mixer = mixitup('.card__container', {
+    selectors: {
+      target: '.products__card'
+    },
+    animation: {
+      duration: 300
+    }
+  })
+}
+
+const linkProducts = document.querySelectorAll('card__item')
+
+function activeProduct(){
+  linkProducts.forEach(l=> l.classList.remove(active-featured))
+  this.classList.add('color-tag')
+
+  linkProducts.forEach(l=> l.addEventListener('click', activeFeatured))
+}
