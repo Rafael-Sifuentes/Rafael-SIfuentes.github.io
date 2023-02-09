@@ -7,7 +7,7 @@
     --bg-color: hsl(209, 80%, 10%);
     --bg-color-light: hsl(32, 69%, 88%);
     --main-color: hsl(209, 35%, 32%);
-    --text-color: hsl(32, 58%, 77%);
+    --text-color: hsl(33, 59%, 74%);
     --white-color: hsl(100, 100%, 100%);
     --container-color: hsl(209, 35%, 18%);
 
@@ -207,7 +207,7 @@ img{
   
   /* Change background header */
   .scroll-header{
-    background-color: var(--container-color);
+    background-color: var(--bg-color);
     box-shadow: 0 4px 4px hsla(0, 0%, 4%, .3);
     color: var(--text-color);
   }
@@ -529,7 +529,7 @@ img{
     background-color: var(--main-color);
     border: none;
     border-radius: 50%;
-    padding: .625rem;
+    padding: .75rem;
     display: inline-flex;
     font-size: 1.25rem;
     font-weight: 500;
@@ -708,7 +708,7 @@ img{
     color: var(--text-color);
     outline: none;
     padding: 1.5rem;
-    border-radius: .75rem;
+    border-radius: 1rem;
     z-index: 1;
   }
 
