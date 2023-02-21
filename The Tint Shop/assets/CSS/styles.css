@@ -1,55 +1,56 @@
-/* Main fonts  */
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
 
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3.5rem;
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
 
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(200, 98%, 53%);
-  --container-color: hsl(221, 51%, 16%);
-  --text-color: hsl(0, 0%, 100%);
-  --text-color-light: hsla(0, 0%, 89%, 0.781);
-  --body-color: hsl(0, 0%, 0%);
-  --body-color-alt: hsl(0, 0%, 100%);
-
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: 'Syne';
-  --biggest-font-size: 2.25rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
-
-  /*========== Font weight ==========*/
-  --font-medium: 500;
-  --font-semi-bold: 600;
-
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
-}
-
-/* Responsive typography */
-@media screen and (min-width: 1024px) {
-  :root {
-    --biggest-font-size: 4rem;
-    --h1-font-size: 2.25rem;
+    --main-color: #EE0000;
+    --main-color-alt : #820808;
+    --main-color-light: #F98181;
+    --white-color: #FFFFFF;
+    --container-color: #222222;
+    --black-color: #000000;
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.8rem;
     --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --h3-font-size: 1.2rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+  
+    /*========== Font weight ==========*/
+    --font-small: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
   }
-}
-
-/*=============== BASE ===============*/
-* {
+  
+  /* Responsive typography */
+  @media screen and (min-width: 1024px) {
+    :root {
+      --biggest-font-size: 4rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+  }
+  
+  /*=============== BASE ===============*/
+  * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -125,13 +126,13 @@
   }
   
   .section__title span {
-    color: var(--text-color-light);
+    color: var(--second-color);
   }
   
   .section__subtitle {
     display: block;
     font-size: var(--small-font-size);
-    color: var(--first-color);
+    color: var(--main-color);
   }
   
   .main {
@@ -152,41 +153,32 @@
   .nav{
     height: var(--header-height);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
   }
 
   .nav__logo{
-    color: #fff;
+    color: var(--white-color);
     display: inline-flex;
     align-items: center;
     column-gap: .25rem;
     font-weight: var(--font-medium);
     transition: .3s;
-    margin-top: 3rem;
   }
 
-  .logo{
-    height: 70px;
-    width: 70px;
-  }
-
-  .nav__logo:hover{
-    color: var(--first-color);
-  }
-  
   @media screen and (max-width: 1023px){
     .nav__menu{
-       position: fixed;
-       bottom: 2rem;
-       background-color: hsla(221, 51%, 16%, 0.751);
-       width: 90%;
-       left: 0;
-       right: 0;
-       margin: 0 auto;
-       padding: 1.3rem 3rem;
-       border-radius: 1.7rem;
-       backdrop-filter: blur(15px);
+      position: fixed;
+      bottom: 2rem;
+      background-color: var(--container-color);
+      box-shadow: 0 8px 24px hsla(228, 66%, 45%, .3);
+      width: 90%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      padding: 1.3rem 3rem;
+      border-radius: 1.25rem;
+      transition: .4s;
     }
 
     .nav__list{
@@ -195,25 +187,30 @@
       align-items: center;
     }
 
+    .nav__list li:nth-child(2){
+      display: none;
+    }
+
     .nav__link{
-      color: var(--text-color);
+      color: var(--white-color);
       display: flex;
       padding: .5rem;
       border-radius: 50%;
     }
 
     .nav__link i{
-      font-size: 1.6rem;
+      font-size: 1.45rem;
     }
 
     .nav__link span{
       display: none;
     }
   }
+  
   /* Change background header */
   .scroll-header{
-    background-color: var(--body-color);
-    box-shadow: 0 1px 4px hsla(228, 4%, 15%, .1);
+    background-color: var(--black-color);
+    box-shadow: 0 1px 4px hsla(228, 66%, 45%, .15);
   }
   
   /* Active link */
@@ -221,14 +218,10 @@
   
   /*=============== HOME ===============*/
   .home{
-    background: linear-gradient(-150deg,
-              hsl(221, 51%, 16%) 0%,
-              hsl(0, 0%, 0%) 70%);
+    background: linear-gradient(155deg,
+                var(--main-color-alt) 0%,
+                var(--black-color)15%) ;
     padding-bottom: 0;
-  }
-
-  .home__data{
-    height: 70vh;
   }
 
   .home__container{
@@ -236,181 +229,171 @@
     row-gap: 3.5rem;
   }
 
-  .home__value-number{
-    color: var(--text-color);
-  }
-
-  .home__subtitle{
-    color: var(--text-color-light);
-    margin-bottom: 1rem;
-    font-size: var(--h1-font-size);
+  .home__title,
+  .home__description{
+    color: var(--white-color);
   }
 
   .home__title{
     font-size: var(--biggest-font-size);
     line-height: 120%;
-    margin-bottom: .7rem;
-    color: var(--first-color);
+    margin-bottom: 2.5rem;
+  }
+
+  .home__subtitle{
+    color: var(--main-color-light);
+    font-size: var(--h2-font-size);
+    font-weight: 400;
+    margin-bottom: 2.5rem;
   }
 
   .home__description{
-    color: var(--text-color);
+    color: var(--white-color);
+    margin-bottom: 2rem;
     font-size: var(--h3-font-size);
-    line-height: 27px;
-    margin-bottom: 1.5rem;
-    letter-spacing: .8px;
+    font-weight: 400;
   }
 
-  .home__description span{
-    color: var(--first-color);
-    font-weight: var(--font-semi-bold);
-    font-size: var(--h2-font-size);
+  .home__cta{
+    display: flex;
+    align-items: center;
+    background-color: var(--black-color);
+    padding: .55rem .55rem .55rem .75rem;
+    display: flex;
+    border-radius: .75rem;
+    border: 3px solid var(--container-color);
+    margin-bottom: 2rem;
   }
 
-  .line{
+  .home__cta i{
+    font-size: 1.5rem;
+    color: var(--main-color);
+  }
+
+  .home__cta .location{
+    width: 90%;
+    color: var(--white-color);
+    margin: 0 .5rem;
+  }
+
+  .home__social{
+    display: flex;
+    column-gap: 2.5rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .social__group{
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .social__icon i{
+    font-size: 2.3rem;
+    color: var(--white-color);
+    margin-right: .2rem;
+  }
+
+  .social__name{
+    color: var(--white-color);
+    font-size: var(--smaller-font-size);
+    font-weight: 400;
+  }
+
+  .home__images{
     position: relative;
     display: flex;
     justify-content: center;
-    height:10px;
-    margin-bottom: 1.5rem;
   }
 
-  .line::before{
-    content: '';
+  .img__bkgr{
+    width: 320px;
+    height: 248px;
+    background: linear-gradient(180deg,
+                var(--main-color) 3%,
+                var(--black-color) 100%);
+    border-radius: 12px 12px 0 0;
+  }
+
+  .home__img{
     position: absolute;
-    width: 90%;
-    height: 3px;
-    background-color: var(--container-color);
-    top: 0;
-    border-radius: 5px;
-  }
-
-  .home__search{
-    background-color: var(--container-color);
-    padding: .5rem .5rem .5rem .75rem;
-    display: flex;
-    align-items: center;
-    border-radius: .5rem;
-    margin-bottom: 2rem;
-    position: relative;
-  }
-
-  .home__search i{
-    font-size: 2.5rem;
-    color: var(--text-color);
-  }
-
-  .home__search-input{
-    width: 90%;
-    color: var(--text-color-light);
-    margin: 0 .5rem;
-    font-size: var(--h3-font-size);
-  }
-  .home__value{
-    position: relative;
-    display: flex;
-    width: 100%;
-    z-index: 4;
-  }
-
-  .home__value-number{
-    font-size: 2rem;
-    font-weight: 700;
-  }
-
-  .home__value-number span{
-    color: var(--first-color);
-  }
-
-  .home__value-description{
-    display: flex;
-    color: var(--text-color-light);
-    font-size: var(--normal-font-size);
-  }
-
-  .home__image{
-    position: absolute;
-    display: flex;
-    justify-self: center;
-    width: 90%;
-    bottom: 4rem;
-  }
-
-  .home__image img{
-    filter: brightness(40%);
-    border-radius: 1rem;
+    width: 270px;
+    height: 270px;
+    overflow: hidden;
+    border-radius: 10px 10px 5px 5px;
+    display: inline-flex;
+    align-items: flex-end;
+    bottom: -2.8rem;
+    box-shadow: 0 16px 32px rgba(190, 39, 39, 0.341);
   }
   
   /*=============== BUTTON ===============*/
   .button{
     display: inline-block;
-    background-color: var(--first-color);
-    color: #fff;
-    padding: 14px 28px;
+    background: var(--main-color);
+    color: var(--white-color);
     border-radius: .5rem;
+    padding: 10px 18px;
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
     transition: .3s;
-    width: 120px;
+    cursor: pointer
   }
 
   .nav__button{
     display: none;
   }
+
+  .home__button{
+    padding: 5px 10px;
+  }
+
+  .home__button i{
+    color: var(--white-color);
+    font-size: 2rem;
+  }
+
+  .home__cta .button:nth-child(4){
+    display: none;
+  }
   
-  /*=============== LOGOS ===============*/
-  .logos__container{
-    padding-top: 2rem;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem 2rem;
-    justify-items: center;
-  }
-
-  .logos__img img{
-    height: 60px;
-    opacity: .2;
-    transition: .3s;
-  }
-
-  .logos__img img:hover{
-    opacity: .6;
-  }
   
   /*=============== POPULAR ===============*/
-  .about__container{
+  .prev__container{
     padding: 1rem 0 5rem;
   }
 
-  .about__card{
-    width: 290px;
-    background-color: var(--container-color);
+  .prev__card{
+    width: 310px;
+    background-color: transparent;
     padding: 1rem 1rem 1.5rem;
     border-radius: 1rem;
     margin: 0 auto;
     transition: .4s;
   }
 
-  .popular__img{
+  .prev__img{
     border-radius: 1rem;
     margin-bottom: 1rem;
   }
 
-  .about__data{
+  .prev__data{
     padding: 0 1rem 0 .5rem;
   }
 
-  .about__price{
+  .prev__car{
     font-size: var(--h2-font-size);
-    color: var(--first-color);
+    color: var(--black-color);
+    margin-bottom: .25rem;
   }
 
-  .about__title{
-    font-size: var(--h3-font-size);
-    margin-bottom: .75rem;
+  .prev__work{
+    color: var(--container-color);
+    font-size: var(--normal-font-size);
   }
 
-  .about__description{
-    font-size: var(--small-font-size);
+  .prev__card:hover{
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.246);
   }
   
   /* Swiper class */
@@ -422,34 +405,30 @@
   .swiper-button-next,
   .swiper-button-prev{
     top: initial;
-    bottom: 0;
+    bottom: .5;
     width: initial;
     height: initial;
-    border: 2px solid var(--text-color-light);
+    background-color: transparent;
+    border: 4px solid var(--main-color);
     padding: 6px;
     border-radius: .5rem;
     font-size: 1.5rem;
-    color: var(--first-color);
+    color: var(--main-color);
   }
 
   .swiper-button-prev{
-    left: calc(50% - 4rem);
+    left: calc(50% - 3.5rem);
   }
 
   .swiper-button-next{
-    right: calc(50% - 4rem);
+    right: calc(50% - 3.5rem);
   }
-  
-  /*=============== VALUE ===============*/
   
   
   /*Rotate icon and add shadows*/
   
   
   /*=============== CONTACT ===============*/
-  
-  
-  /*=============== SUBSCRIBE ===============*/
   
   
   /*=============== FOOTER ===============*/
@@ -473,5 +452,3 @@
   
   /* For large devices */
   
-  
-  /* For 2K & 4K resolutions */
