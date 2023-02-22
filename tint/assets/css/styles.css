@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
 
 @font-face {
-  font-family: 'main-font';
-  src: url(/assets/corleone/Corleone.TTF);
+  font-family: 'main';
+  src: url(/tint/assets/corleone/Corleone.TTF);
   font-style: normal;
   font-weight: 600;
 }
@@ -25,7 +25,6 @@
     /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
     --body-font: 'Poppins', sans-serif;
-    --title-font: 'main-font';
     --biggest-font-size: 2.25rem;
     --subtitle-size: 2rem;
     --h1-font-size: 1.8rem;
@@ -130,7 +129,7 @@
   }
   
   .section__title {
-    font-family: main-font;
+    font-family: main;
     font-size: var(--subtitle-size);
     margin-bottom: 1rem;
   }
@@ -168,7 +167,7 @@
   }
 
   .nav__logo{
-    font-family: var(--title-font);
+    font-family: main;
     font-size: var(--h2-font-size);
     color: var(--white-color);
     display: inline-flex;
