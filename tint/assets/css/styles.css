@@ -183,7 +183,7 @@
       position: fixed;
       bottom: 2rem;
       background-color: var(--container-color);
-      box-shadow: 0 8px 24px hsla(228, 66%, 45%, .3);
+      box-shadow: 0 8px 24px rgba(190, 39, 39, 0.3);
       width: 90%;
       left: 0;
       right: 0;
@@ -251,6 +251,7 @@
 
   .home__title{
     font-family: main-font;
+    text-align: center;
     font-size: var(--biggest-font-size);
     line-height: 120%;
   }
@@ -260,10 +261,16 @@
   }
 
   .home__subtitle{
+    text-align: center;
     color: var(--main-color-light);
     font-size: var(--h2-font-size);
     font-weight: 400;
     margin-bottom: 2.5rem;
+  }
+
+  .home__subtitle span{
+    color: var(--white-color);
+    font-size: var(--h3-font-size);
   }
 
   .home__description{
@@ -271,6 +278,11 @@
     margin-bottom: 2rem;
     font-size: var(--h3-font-size);
     font-weight: 400;
+  }
+
+  .home__description span{
+    color: var(--main-color);
+    font-weight: var(--font-semi-bold);
   }
 
   .home__cta{
