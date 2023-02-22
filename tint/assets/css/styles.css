@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
 
+@font-face {
+  font-family: 'main-font';
+  src: url(/assets/corleone/Corleone.TTF);
+  font-style: normal;
+  font-weight: 600;
+}
+
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -18,7 +25,9 @@
     /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
     --body-font: 'Poppins', sans-serif;
+    --title-font: 'main-font';
     --biggest-font-size: 2.25rem;
+    --subtitle-size: 2rem;
     --h1-font-size: 1.8rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.2rem;
@@ -121,7 +130,8 @@
   }
   
   .section__title {
-    font-size: var(--h2-font-size);
+    font-family: main-font;
+    font-size: var(--subtitle-size);
     margin-bottom: 1rem;
   }
   
@@ -158,6 +168,8 @@
   }
 
   .nav__logo{
+    font-family: var(--title-font);
+    font-size: var(--h2-font-size);
     color: var(--white-color);
     display: inline-flex;
     align-items: center;
@@ -165,6 +177,7 @@
     font-weight: var(--font-medium);
     transition: .3s;
   }
+
 
   @media screen and (max-width: 1023px){
     .nav__menu{
@@ -214,7 +227,10 @@
   }
   
   /* Active link */
-  
+  .active-link{
+    background: var(--main-color);
+    padding-bottom: 0;
+  }
   
   /*=============== HOME ===============*/
   .home{
@@ -235,9 +251,13 @@
   }
 
   .home__title{
+    font-family: main-font;
     font-size: var(--biggest-font-size);
     line-height: 120%;
-    margin-bottom: 2.5rem;
+  }
+
+  .home__title img{
+    width: 300px;
   }
 
   .home__subtitle{
@@ -261,7 +281,7 @@
     padding: .55rem .55rem .55rem .75rem;
     display: flex;
     border-radius: .75rem;
-    border: 3px solid var(--container-color);
+    border: 3px solid var(--white-color);
     margin-bottom: 2rem;
   }
 
@@ -274,6 +294,10 @@
     width: 90%;
     color: var(--white-color);
     margin: 0 .5rem;
+  }
+
+  .location span{
+    display: none;
   }
 
   .home__social{
@@ -358,13 +382,13 @@
   }
   
   
-  /*=============== POPULAR ===============*/
+  /*=============== Previous Work ===============*/
   .prev__container{
     padding: 1rem 0 5rem;
   }
 
   .prev__card{
-    width: 310px;
+    width: 330px;
     background-color: transparent;
     padding: 1rem 1rem 1.5rem;
     border-radius: 1rem;
@@ -405,7 +429,7 @@
   .swiper-button-next,
   .swiper-button-prev{
     top: initial;
-    bottom: .5;
+    bottom: 1.2;
     width: initial;
     height: initial;
     background-color: transparent;
@@ -445,10 +469,164 @@
   
   /*=============== BREAKPOINTS ===============*/
   /* For small devices */
-  
+  @media screen and (max-width: 350px){
+    .container{
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    .section{
+      padding: 3.5rem 0 1rem;
+    }
+
+    .home{
+      padding-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: 320px){
+    .nav__menu{
+      padding: 1.3rem 1.5rem;
+    }
+
+    .home__img{
+      width: 220px;
+      height: 280px;
+    }
+
+    .img__bkgr{
+      width: 240px;
+      height: 264px;
+    }
+
+    .prev__card{
+      width: 230px;
+      padding: .5rem .5rem .75rem;
+    }
+  }
   
   /* For medium devices */
-  
+  @media screen and (min-width: 567px){
+    .nav__menu{
+      width: 342px;
+    }
+
+    .home__cta{
+      width: 412px;
+    }
+  }
+
+  @media screen and (min-width: 767px){
+    .home__container{
+      grid-template-columns: repeat(2, 1fr);
+      padding-top: 2rem;
+    }
+
+    .location span{
+      display: contents;
+    }
+
+    .img__bkgr{
+      align-self: flex-end;
+    }
+
+    .home__social{
+      padding-bottom: 2rem;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev{
+      bottom: 2;
+    }
+  }
   
   /* For large devices */
-  
+  @media screen and (min-width: 1023px){
+    .section{
+      padding: 7.5rem 0 1rem;
+    }
+
+    .section__subtitle{
+      font-size: var(--h3-font-size);
+      margin-bottom: .5rem;
+    }
+
+    .section__title{
+      font-size: 3.25rem;
+    }
+
+    .nav{
+      height: calc(3.5rem + 1.5rem);
+    }
+
+    .nav__menu{
+      width: initial;
+      margin-left: auto;
+    }
+
+    .nav__list{
+      display: flex;
+      column-gap: 3rem;
+    }
+
+    .nav__link{
+      color: var(--white-color);
+    }
+
+    .nav__link i{
+      display: none;
+    }
+
+    .nav__button{
+      display: none;
+      margin-left: 3rem;
+    }
+
+    .active-link{
+      background: none;
+      box-shadow: none;
+      color: var(--main-color);
+      font-weight: var(--font-medium);
+    }
+
+    .home{
+      padding-bottom: 0;
+    }
+
+    .home__container{
+      padding-top: 5rem;
+      column-gap: 2rem;
+    }
+
+    .home__social{
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .social__name{
+      font-size: var(--normal-font-size);
+    }
+
+    .home__title img{
+      width: 375px;
+    }
+
+    .home__subtitle{
+      font-size: var(--h1-font-size);
+    }
+
+    .img__bkgr{
+      width: 480px;
+      height: 611px;
+    }
+
+    .home__img{
+      width: 432px;
+      height: 634px;
+      bottom: -2.5rem;
+    }
+
+    .prev__container{
+      padding-top: 3rem;
+    }
+  }
