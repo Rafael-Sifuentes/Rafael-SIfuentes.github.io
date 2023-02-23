@@ -18,15 +18,15 @@
     --main-color: #EE0000;
     --main-color-alt : #820808;
     --main-color-light: #F98181;
-    --white-color: #FFFFFF;
+    --white-color: #EEEEEE;
     --container-color: #222222;
     --black-color: #000000;
   
     /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
     --body-font: 'Poppins', sans-serif;
-    --biggest-font-size: 2.25rem;
-    --subtitle-size: 2rem;
+    --biggest-font-size: 2.5rem;
+    --subtitle-size: 2.25rem;
     --h1-font-size: 1.8rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.2rem;
@@ -199,15 +199,16 @@
       align-items: center;
     }
 
-    .nav__list li:nth-child(2){
+    /* .nav__list li:nth-child(2){
       display: none;
-    }
+    } */
 
     .nav__link{
       color: var(--white-color);
       display: flex;
       padding: .5rem;
       border-radius: 50%;
+      transition: .4s;
     }
 
     .nav__link i{
@@ -227,8 +228,11 @@
   
   /* Active link */
   .active-link{
-    background: var(--main-color);
-    padding-bottom: 0;
+    color: var(--main-color);
+  }
+
+  .active-link i{
+    font-size: 1.7rem;
   }
   
   /*=============== HOME ===============*/
@@ -281,7 +285,7 @@
   }
 
   .home__description span{
-    color: var(--main-color);
+    color: var(--main-color-light);
     font-weight: var(--font-semi-bold);
   }
 
@@ -297,14 +301,18 @@
   }
 
   .home__cta i{
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--main-color);
   }
 
   .home__cta .location{
-    width: 90%;
+    width: 80%;
     color: var(--white-color);
-    margin: 0 .5rem;
+    margin: 0 .7rem;
+  }
+
+  .location{
+    font-size: var(--h3-font-size);
   }
 
   .location span{
@@ -342,7 +350,7 @@
   }
 
   .img__bkgr{
-    width: 320px;
+    width: 90%;
     height: 248px;
     background: linear-gradient(180deg,
                 var(--main-color) 3%,
@@ -352,9 +360,10 @@
 
   .home__img{
     position: absolute;
-    width: 270px;
+    width: 80%;
     height: 270px;
     overflow: hidden;
+    object-fit: cover;
     border-radius: 10px 10px 5px 5px;
     display: inline-flex;
     align-items: flex-end;
@@ -390,6 +399,10 @@
 
   .home__cta .button:nth-child(4){
     display: none;
+  }
+
+  .about__button{
+    padding: 1rem;
   }
   
   
@@ -463,8 +476,42 @@
   /*Rotate icon and add shadows*/
   
   
-  /*=============== CONTACT ===============*/
-  
+  /*=============== ABOUT ===============*/
+  .about__container{
+    row-gap: 2rem;
+  }
+
+  .about__img{
+    width: 320px;
+    justify-self: center;
+  }
+
+  .about__title{
+    margin-bottom: 1.5rem;
+  }
+
+  .about__description{
+    margin-bottom: 2rem;
+  }
+
+  .about__details{
+    display: grid;
+    row-gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .about__details-description{
+    display: inline-flex;
+    column-gap: .5rem;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+  }
+
+  .about__details-icon{
+    font-size: 1rem;
+    color: var(--main-color);
+    margin-top: .15rem;
+  }
   
   /*=============== FOOTER ===============*/
   
@@ -639,5 +686,12 @@
 
     .prev__container{
       padding-top: 3rem;
+    }
+  }
+
+  @media screen and (min-width: 1040px){
+    .container{
+      margin-left: auto;
+      margin-right: auto;
     }
   }
