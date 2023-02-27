@@ -10,7 +10,7 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-    --header-height: 3.5rem;
+    --header-height: 3.7rem;
   
     /*========== Colors ==========*/
     /*Color mode HSL(hue, saturation, lightness)*/
@@ -25,7 +25,8 @@
     /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
     --body-font: 'Poppins', sans-serif;
-    --biggest-font-size: 2.5rem;
+    --biggest-font-size: 2.7rem;
+    --big-font-size: 2.5rem;
     --subtitle-size: 2.3rem;
     --h1-font-size: 1.8rem;
     --h2-font-size: 1.5rem;
@@ -48,6 +49,7 @@
   @media screen and (min-width: 1024px) {
     :root {
       --biggest-font-size: 4rem;
+      --big-font-size: 3.2rem;
       --h1-font-size: 2.25rem;
       --h2-font-size: 1.5rem;
       --h3-font-size: 1.25rem;
@@ -146,6 +148,13 @@
     font-size: var(--subtitle-size);
     margin-bottom: 1rem;
   }
+
+  .section__title-center{
+    font-family: main;
+    font-size: var(--subtitle-size);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
   
   .section__title span {
     color: var(--second-color);
@@ -194,7 +203,7 @@
 
   .nav__logo{
     font-family: main;
-    font-size: var(--h1-font-size);
+    font-size: var(--big-font-size);
     color: var(--white-color);
     display: inline-flex;
     align-items: center;
@@ -439,7 +448,7 @@
 
   .prev__card{
     width: 330px;
-    background-color: transparent;
+    background-color: var(--white-color);
     padding: 1rem 1rem 1.5rem;
     margin-bottom: 1rem;
     border-radius: 1rem;
@@ -548,8 +557,77 @@
     margin-top: .15rem;
   }
   
-  /*=============== FOOTER ===============*/
-  
+  /*=============== FAQ's ===============*/
+  .questions{
+    background-color: transparent ;
+  }
+
+  .questions__container{
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+
+  .questions__group{
+    display: grid;
+    row-gap: 1.5rem;
+  }
+
+  .questions__item{
+    background-color: var(--black-color);
+    border-radius: .25rem;
+  }
+
+  .questions__item-title{
+    color: var(--white-color);
+    font-size: var(--normal-font-size);
+  }
+
+  .questions__icon{
+    font-size: 1.25rem;
+    color: var(--main-color);
+  }
+
+  .questions__description{
+    color: var(--white-color);
+    font-size: var(--small-font-size);
+    padding: 0 1.25rem 1.25rem 2.5rem;
+  }
+
+  .questions__header{
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    padding: 1rem .5rem;
+    cursor: pointer;
+  }
+
+  .questions__content{
+    overflow: hidden;
+    height: 0;
+  }
+
+  .questions__item,
+  .questions__header,
+  .questions__item-title,
+  .questions__icon,
+  .questions__description,
+  .questions__content{
+    transition: .3s;
+  }
+
+  .questions__item:hover{
+    box-shadow: rgba(190, 39, 39, 0.15);
+  }
+
+  .accordion-open .questions__header,
+  .accordion-open .questions__content{
+    background-color: var(--container-color);
+  }
+
+  .accordion-open .questions__icon{
+    transform: rotate(45deg);
+    color: var(--white-color);
+  }
   
   /*=============== SCROLL BAR ===============*/
   
