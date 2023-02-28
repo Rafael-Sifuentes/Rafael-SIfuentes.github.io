@@ -574,7 +574,7 @@
 
   .questions__item{
     background-color: var(--black-color);
-    border-radius: .25rem;
+    border-radius: .5rem;
   }
 
   .questions__item-title{
@@ -628,9 +628,66 @@
     transform: rotate(45deg);
     color: var(--white-color);
   }
+
+  .accordion-open .questions__item{
+    border-radius: .5rem;
+  }
   
-  /*=============== SCROLL BAR ===============*/
-  
+  /*=============== CONTACT ===============*/
+  .contact{
+    background-color: var(--black-color);
+    color: var(--white-color);
+  }
+  .contact__container{
+    row-gap: 3.5rem;
+  }
+
+  .contact__des{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: 2rem;
+  }
+
+  .contact__data{
+    display: grid;
+    row-gap: 1.5rem;
+  }
+
+  .contact__subtitle{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-small);
+    margin-bottom: .5rem;
+  }
+
+  .contact__icon{
+    color: var(--main-color);
+    font-size: var(--h3-font-size);
+  }
+
+  .contact__icon-alt{
+    color: var(--white-color);
+    font-size: var(--h1-font-size);
+    padding: .5rem;
+  }
+
+  .contact__description{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+  }
+
+  .contact__button{
+    display: inline-flex;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1.2rem;
+  }
+
+  .contact__button span{
+    font-size: var(--h3-font-size);
+  }
   
   /*=============== SCROLL UP ===============*/
   
@@ -682,9 +739,22 @@
       width: 342px;
     }
 
+    .home__title{
+      text-align: initial;
+    }
+
+    .home__subtitle{
+      text-align: initial;
+    }
+
     .home__cta{
       width: 412px;
     }
+
+    .line::after{
+      height: 60px;
+    }
+
   }
 
   @media screen and (min-width: 767px){
@@ -708,6 +778,17 @@
     .swiper-button-next,
     .swiper-button-prev{
       bottom: 2;
+    }
+
+    .about__container{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+      justify-content: center;
+    }
+
+    .about__img{
+      width: 650px;
+      align-self: center;
     }
   }
   
