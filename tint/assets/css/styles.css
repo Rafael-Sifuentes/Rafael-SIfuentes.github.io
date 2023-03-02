@@ -581,7 +581,7 @@
 
   .questions__item-title{
     color: var(--white-color);
-    font-size: var(--normal-font-size);
+    font-size: var(--h3-font-size);
   }
 
   .questions__icon{
@@ -591,7 +591,7 @@
 
   .questions__description{
     color: var(--white-color);
-    font-size: var(--small-font-size);
+    font-size: var(--normal-font-size);
     padding: 0 1.25rem 1.25rem 2.5rem;
   }
 
@@ -705,10 +705,37 @@
     font-size: var(--subtitle-size);
   }
   
-  /*=============== SCROLL UP ===============*/
-  
-  
-  /* Show Scroll Up*/
+  /*=============== FOOTER ===============*/
+  .footer{
+    background-color: var(--container-color);
+    display: grid;
+  }
+
+  .footer__container{
+    padding: 2rem 0 6rem;
+  }
+
+  .footer__logo{
+    margin-bottom: 2.5rem;
+  }
+
+  .footer__logo img{
+    width: 250px;
+  }
+
+  .footer__sub{
+    color: var(--white-color);
+  }
+
+  .developer{
+    color: var(--white-color);
+  }
+
+  .footer__copy{
+    text-align: center;
+    color: var(--main-color-light);
+    font-size: var(--smaller-font-size);
+  }
   
   
   /*=============== BREAKPOINTS ===============*/
