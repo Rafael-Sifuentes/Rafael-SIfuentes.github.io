@@ -27,6 +27,7 @@ var swiperPrev = new Swiper(".prev__container", {
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
+
     
 const scrollActive = () =>{
   	const scrollY = window.pageYOffset
@@ -38,15 +39,14 @@ const scrollActive = () =>{
 			  sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
 
 		if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-			sectionsClass.classList.add('active-link');
+			sectionsClass.classList.add('active-link')
 		}else{
-
-			sectionsClass.classList.remove('active-link');
-    
+			sectionsClass.classList.remove('active-link')
 		}                                                    
 	})
 }
 window.addEventListener('scroll', scrollActive)
+
 
 
 /*=============== QUESTIONS OPEN / CLOSE ===============*/
