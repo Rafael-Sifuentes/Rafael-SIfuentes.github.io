@@ -529,7 +529,7 @@ img{
     background-color: var(--main-color);
     border: none;
     border-radius: 50%;
-    padding: .75rem;
+    padding: 1rem;
     display: inline-flex;
     font-size: 1.25rem;
     font-weight: 500;
@@ -610,7 +610,7 @@ img{
     top: 1.5rem;
     right: 1.5rem;
     font-size: 1.5rem;
-    color: var(--main-color);
+    color: var(--text-color);
     cursor: pointer;
   }
   
@@ -837,6 +837,10 @@ img{
   /*=============== FOOTER =======================================================================*/
   .footer__container{
     row-gap: 3rem;
+  }
+
+  .footer{
+    background-color: var(--bg-color);
   }
 
   .footer__logo{
