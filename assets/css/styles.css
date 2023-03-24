@@ -281,7 +281,6 @@
     color: var(--title-color);
     font-weight: var(--font-medium);
     transition: .4s;
-    display: none;
   }
 
   .nav__logo span{
@@ -1189,12 +1188,6 @@
 
     .contact__container{
       grid-template-columns: repeat(2, max-content);
-      justify-content: center;
-    }
-
-    .nav__logo{
-      display: flex;
-      align-items: center;
       justify-content: center;
     }
   }
