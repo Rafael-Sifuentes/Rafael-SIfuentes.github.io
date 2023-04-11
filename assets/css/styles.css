@@ -15,10 +15,10 @@
         hsl(213, 85%, 3%)
   */
 
-  --first-hue: 155;
+  --first-hue: 17;
   --sat: 88%;
   --lig: 62%;
-  --second-hue: 219;
+  --second-hue: 209;
   --third-hue: 200;
 
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
@@ -26,7 +26,7 @@
   --title-color: hsl(var(--second-hue), 15%, 95%);
   --text-color: hsl(var(--second-hue), 8%, 75%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
-  --body-color: hsl(var(--second-hue), 85%, 3%);
+  --body-color: hsl(var(--second-hue), 85%, 3.5%);
   --container-color: hsl(var(--second-hue), 15%, 12%);
 
   --third-color: hsl(17, 85%, 75%);
