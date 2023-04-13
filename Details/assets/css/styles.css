@@ -475,7 +475,7 @@
 
   .work__title{
     font-size: var(--h3-font-size);
-    margin-bottom: var(--mb-0-25);
+    margin-bottom: .25rem;
   }
 
   .work__description{

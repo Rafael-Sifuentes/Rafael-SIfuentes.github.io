@@ -5,14 +5,14 @@ font-family: 'Rye', cursive; */
 
 /*=============== VARIABLES CSS ===============*/
 :root{
-    --header-height: 3.5rem;
+    --header-height: 4.5rem;
 
     /* colors */
     --main-color: #EE0000;
     --main-color-alt: #F36C6C;
     --text-color: #ffff;
     --body-color: #000;
-    --nav-color: #303232;
+    --nav-color: #181515;
 
     /* Font and Typography */
     --body-font: 'Lora', serif;
@@ -110,7 +110,7 @@ img{
 
 .section__subtitle{ 
     display: block;
-    font-size: var(--h3-font-size);
+    font-size: var(--h2-font-size);
     font-weight: var(--font-medium);
     font-family: var(--title-font);
     margin-bottom: 1rem;
@@ -119,6 +119,8 @@ img{
 .button{
     display: inline-block;
     background: var(--main-color);
+    /* border: 4px solid var(--main-color); */
+    border-radius: .5rem;
     color: var(--text-color);
     padding: 1rem .7rem;
     font-size: var(--h1-font-size);
@@ -130,15 +132,19 @@ img{
 
 .line{
   position: relative;
+  content: '';
+  background-color: var(--main-color);
+  width: 60px;
+  height: 3px;
 }
 
-.line::after{
+/* .line::after{
   content: '';
   position: absolute;
   background-color: var(--main-color);
   width: 60px;
   height: 2.5px;
-}
+} */
 
 .main{
     overflow: hidden;
@@ -168,6 +174,7 @@ img{
     left: 0;
     right: 0;
     margin: auto;
+    z-index: 10;
   }
 
   .nav__list{
@@ -190,11 +197,15 @@ img{
     display: none;
   }
 
+  .scroll-header{
+    background-color: #000;
+  }
+
 
   @media screen and (max-width: 1023px){
     .nav__menu{
       position: fixed;
-      bottom: 2rem;
+      bottom: 1.5rem;
       background-color: var(--nav-color);
       box-shadow: 0 8px 24px rgba(190, 39, 39, 0.3);
       width: 90%;
@@ -204,6 +215,7 @@ img{
       padding: 1.5rem 3rem;
       border-radius: 1.25rem;
       transition: .4s;
+      z-index: 10;
     }
 
     .nav__list{
@@ -248,16 +260,22 @@ img{
   .home__description{
     font-size: 1.3rem;
     font-weight: var(--font-regular);
+    line-height: 1.7rem;
   }
 
   .home__location{
     margin-top: 2rem;
+    font-size: var(--h2-font-size);
+  }
+
+  .home__location span{
+    font-size: var(--normal-font-size);
   }
 
   .home__socials{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 1rem;
   }
 
@@ -272,7 +290,7 @@ img{
   }
 
   .home__link{
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     padding: 1rem;
   }
 
@@ -282,8 +300,48 @@ img{
 
   .home__img{
     position: absolute;
-    top: 0;
+    bottom: 0;
     height: 100vh;
-    z-index: -1;
     object-fit: cover;
+    z-index: -1;
+    filter: brightness(50%);
+  }
+
+  .img__container{
+    position: relative;
+  }
+
+  /*=============== ABOUT ===============*/
+  .about__container{
+    padding: 3rem 0 2rem;
+  }
+
+  .about__titles{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .about__titles .line{
+    width: 40px;
+    z-index: -1;
+  }
+
+  .about__subtitle{
+    margin-bottom: 0;
+  }
+
+  .about__title{
+    color: var(--main-color-alt);
+  }
+
+  .about__subtitle,
+  .about__title{
+    text-align: center;
+  }
+
+  .about__description{
+    font-size: var(--normal-font-size);
+    margin-bottom: 2rem;
   }
