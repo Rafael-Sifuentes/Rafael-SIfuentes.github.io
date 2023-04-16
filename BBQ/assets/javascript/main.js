@@ -8,3 +8,16 @@ const scrollHeader = () =>{
 window.addEventListener('scroll' , scrollHeader)
 
 /*==================== SWIPER ====================*/
+var swiper = new Swiper(".featured__container", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: true,
+    spaceBetween: 22,
+    coverflowEffect: {
+      rotate: 20,
+      slideShadows: true,
+      depth: 100,
+    },
+  });

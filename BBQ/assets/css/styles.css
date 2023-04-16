@@ -95,7 +95,7 @@ img{
 }
 
 .section{
-    padding: 4.5rem 0 2rem;  
+    padding: 4.5rem 0 0;  
 }
 
 .section__title{
@@ -159,6 +159,7 @@ img{
     background-color: transparent;
     z-index: var(--z-fixed);
     transition: .4s;
+    z-index: 10;
   }
 
   .nav{
@@ -253,7 +254,7 @@ img{
 
   /*=============== HOME ===============*/
   .home__container{
-    padding-top: 4rem;
+    padding: 4rem 0 3rem;
     gap: 2.5rem;
   }
 
@@ -313,7 +314,8 @@ img{
 
   /*=============== ABOUT ===============*/
   .about__container{
-    padding: 3rem 0 2rem;
+    padding: 3.5rem 0 3rem;
+    position: relative;
   }
 
   .about__titles{
@@ -325,11 +327,20 @@ img{
 
   .about__titles .line{
     width: 40px;
-    z-index: -1;
   }
 
   .about__subtitle{
     margin-bottom: 0;
+  }
+
+  .about__subtitle-alt{
+    font-family: var(--body-font);
+    text-align: center;
+  }
+
+  .about__subtitle-alt span{
+    font-family: var(--title-font);
+    color: var(--main-color-alt);
   }
 
   .about__title{
@@ -344,4 +355,37 @@ img{
   .about__description{
     font-size: var(--normal-font-size);
     margin-bottom: 2rem;
+  }
+
+  .featured__card{
+    position: relative;
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+
+  .featured__data{
+    position: absolute;
+    bottom: 1rem;
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.778);
+    padding: 1rem .7rem;
+    border-radius: 0 .5rem .5rem 0;
+  }
+
+  .featured__title{
+    font-size: var(--normal-font-size);
+  }
+
+  .featured__description{
+    font-size: var(--smaller-font-size);
+  }
+
+  .about__bkgr{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    filter: brightness(25%);
+    z-index: -1;
   }
