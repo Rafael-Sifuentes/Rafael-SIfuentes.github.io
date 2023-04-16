@@ -223,12 +223,13 @@ img{
       margin: auto;
       padding: 1.5rem 3rem;
       border-radius: 2.5rem;
+      border: solid 2.5px var(--main-color);
       transition: .4s;
       z-index: 10;
     }
 
     .nav__logo{
-      width: 85%;
+      width: 90%;
     }
 
     .nav__list{
