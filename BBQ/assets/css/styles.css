@@ -150,6 +150,10 @@ img{
     overflow: hidden;
 }
 
+.img__container{
+  position: relative;
+}
+
 /*=============== HEADER & NAV ===============*/
 .header{
     position: fixed;
@@ -167,6 +171,10 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  
+  .nav__logo{
+    width: 100%;
   }
 
   .nav__menu{
@@ -214,9 +222,13 @@ img{
       right: 0;
       margin: auto;
       padding: 1.5rem 3rem;
-      border-radius: 1.25rem;
+      border-radius: 2.5rem;
       transition: .4s;
       z-index: 10;
+    }
+
+    .nav__logo{
+      width: 85%;
     }
 
     .nav__list{
@@ -228,7 +240,7 @@ img{
     .nav__list li:nth-child(3){
       position: fixed;
       top: 0;
-      left: 50%;
+      left: 52%;
       transform: translateX(-50%);
     }
 
@@ -305,7 +317,7 @@ img{
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-    filter: brightness(50%);
+    filter: brightness(60%);
   }
 
   .img__container{
@@ -313,8 +325,11 @@ img{
   }
 
   /*=============== ABOUT ===============*/
+  .about{
+    position: relative;
+  }
   .about__container{
-    padding: 3.5rem 0 3rem;
+    padding-bottom: 3.5rem;
     position: relative;
   }
 
