@@ -21,3 +21,14 @@ var swiper = new Swiper(".featured__container", {
       depth: 100,
     },
   });
+
+
+/*=============== MIXITUP FILTER FEATURED ===============*/
+let mixerFeatured = mixitup('.menu__container', {
+  selectors: {
+      target: '.menu__item'
+  },
+  animation: {
+      duration: 300
+  }
+});

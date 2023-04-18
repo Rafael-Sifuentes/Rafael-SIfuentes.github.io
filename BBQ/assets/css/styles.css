@@ -476,6 +476,7 @@ img{
 
   .menu__items{
     position: relative;
+    row-gap: 2rem;
   }
 
   .menu__item{
@@ -496,10 +497,20 @@ img{
     margin-bottom: 1rem;
   }
 
+  .menu__item-title span{
+    font-size: var(--small-font-size);
+  }
+
   .item__title{
     font-size: var(--big-font-size);
     font-family: var(--title-font);
     color: var(--body-color);
+  }
+
+  .item__title-alt{
+    font-size: var(--h1-font-size);
+    color: var(--body-color);
+    font-family: var(--title-font);
   }
 
   .item__price{
@@ -514,9 +525,24 @@ img{
   }
 
   .menu__item-container .line{
+    height: 4px;
     width: 100%;
     border: dashed;
     color: var(--body-color);
     background-color: none;
     margin-bottom: .5rem;
+    background-color: transparent;
   }
+
+  .menu__item-img{
+    position: relative;
+    height: 300px;
+    width: auto;
+    border-radius: 1.5rem;
+    overflow: hidden;
+  }
+
+  .menu__item-pic{
+    position: absolute;
+  }
+
