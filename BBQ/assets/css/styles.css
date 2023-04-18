@@ -13,7 +13,7 @@ font-family: 'Rye', cursive; */
     --text-color: #ffff;
     --body-color: #000;
     --nav-color: #181515;
-    --container-color: #612727;
+    --container-color: #712626;
 
     /* Font and Typography */
     --body-font: 'Lora', serif;
@@ -260,10 +260,10 @@ img{
       transform: translateX(-50%);
     }
 
-    .nav__list li:nth-child(4){
+    /* .nav__list li:nth-child(4){
       animation: fire 1.5s linear infinite;
       color: #EE0000;
-    }
+    } */
 
 
     .nav__link{
@@ -390,8 +390,8 @@ img{
   }
 
   .about__description{
-    font-size: var(--normal-font-size);
-    margin-bottom: 2rem;
+    font-size: var(--h3-font-size);
+    margin-bottom: 3.5rem;
   }
 
   .featured__card{
@@ -431,6 +431,7 @@ img{
   .menu__title,
   .menu__subtitle{
     text-align: center;
+    color: var(--text-color);
   }
 
   .menu__title span{
@@ -440,11 +441,18 @@ img{
 
   .menu__subtitle{
     margin-bottom: 0;
+    color: var(--text-color);
   }
 
   .menu__buttons{
     position: relative;
     justify-content: center;
+  }
+
+  .menu__buttons p{
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--text-color);
   }
 
   .card__filters{
@@ -460,6 +468,7 @@ img{
 
   .card__description{
     font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
     font-family: var(--body-font);
   }
 
@@ -480,7 +489,7 @@ img{
   }
 
   .menu__item{
-    background-color: var(--main-color-alt);
+    background-color: var(--container-color);
     border-radius: 1.5rem;
   }
 
@@ -504,23 +513,25 @@ img{
   .item__title{
     font-size: var(--big-font-size);
     font-family: var(--title-font);
-    color: var(--body-color);
+    color: var(--text-color);
   }
 
   .item__title-alt{
     font-size: var(--h1-font-size);
-    color: var(--body-color);
+    color: var(--text-color);
     font-family: var(--title-font);
   }
 
   .item__price{
     font-family: var(--title-font);
     font-size: var(--h3-font-size);
-    color: var(--body-color);
+    color: var(--text-color);
+    padding-top: 1rem;
   }
 
   .menu__item-description{
     font-size: var(--h3-font-size);
+    font-weight: var(--font-regular);
     margin-bottom: 2rem;
   }
 
@@ -545,4 +556,37 @@ img{
   .menu__item-pic{
     position: absolute;
   }
+
+  .menu__drinks{
+    background-color: var(--nav-color);
+    padding: 2rem 1.5rem;
+    border-radius: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .drinks__title-cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+
+  .drinks__title-cont .line{
+    width: 100%;
+    border: dashed;
+    background-color: transparent;
+    color: var(--main-color);
+  }
+
+  .drinks__title{
+    font-family: var(--title-font);
+    font-size: var(--h1-font-size);
+    margin-right: 1rem;
+  }
+
+  .drink__item{
+    font-size: var(--h3-font-size);
+  }
+
+
 
