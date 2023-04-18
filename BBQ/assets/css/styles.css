@@ -13,6 +13,7 @@ font-family: 'Rye', cursive; */
     --text-color: #ffff;
     --body-color: #000;
     --nav-color: #181515;
+    --container-color: #612727;
 
     /* Font and Typography */
     --body-font: 'Lora', serif;
@@ -424,4 +425,98 @@ img{
     height: 100%;
     filter: brightness(25%);
     z-index: -1;
+  }
+
+  /*=============== MENU ===============*/
+  .menu__title,
+  .menu__subtitle{
+    text-align: center;
+  }
+
+  .menu__title span{
+    color: var(--main-color-alt);
+    font-family: var(--title-font);
+  }
+
+  .menu__subtitle{
+    margin-bottom: 0;
+  }
+
+  .menu__buttons{
+    position: relative;
+    justify-content: center;
+  }
+
+  .card__filters{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .card__description{
+    font-size: var(--normal-font-size);
+    font-family: var(--body-font);
+  }
+
+  .card__item{
+    width: 150px;
+    height: 70px;
+    border: none;
+    outline: none;
+    border-radius: .5rem;
+    background-color: var(--container-color);
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+  }
+
+  .menu__items{
+    position: relative;
+  }
+
+  .menu__item{
+    background-color: var(--main-color-alt);
+    border-radius: 1.5rem;
+  }
+
+  .menu__item-container{
+    position: relative;
+    margin: 1.5rem 1.5rem 2rem;
+  }
+
+  .menu__item-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .item__title{
+    font-size: var(--big-font-size);
+    font-family: var(--title-font);
+    color: var(--body-color);
+  }
+
+  .item__price{
+    font-family: var(--title-font);
+    font-size: var(--h3-font-size);
+    color: var(--body-color);
+  }
+
+  .menu__item-description{
+    font-size: var(--h3-font-size);
+    margin-bottom: 2rem;
+  }
+
+  .menu__item-container .line{
+    width: 100%;
+    border: dashed;
+    color: var(--body-color);
+    background-color: none;
+    margin-bottom: .5rem;
   }
