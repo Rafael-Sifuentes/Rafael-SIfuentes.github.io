@@ -226,6 +226,11 @@ img{
     background-color: #000;
   }
 
+  .active-link,
+  .active-link i{
+    color: var(--main-color);
+  }
+
 
   @media screen and (max-width: 1023px){
     .nav__menu{
@@ -457,8 +462,9 @@ img{
     position: absolute;
     top: 0;
     height: 100%;
-    filter: brightness(25%);
+    filter: brightness(10%);
     z-index: -1;
+    object-fit: cover;
   }
 
   /*=============== MENU ===============*/
@@ -626,5 +632,108 @@ img{
     font-size: var(--h3-font-size);
   }
 
+  /*=============== CONTACT ===============*/
+  .contact{
+    padding-bottom: 4rem;
+    position: relative;
+  }
 
+  .contact__img{
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    filter: brightness(50%);
+    object-fit: cover;
+  }
 
+  .contact__subtitle,
+  .contact__title{
+    text-align: center;
+  }
+
+  .contact__subtitle{
+    font-size: var(--h3-font-size);
+    margin-bottom: .5rem;
+  }
+
+  .contact__title{
+    color: var(--main-color-alt);
+    font-weight: var(--font-semi-bold);
+    font-size: var(--h1-font-size);
+  }
+
+  .contact__data{
+    margin-bottom: 2rem;
+  }
+
+  .contact__description{
+    margin-bottom: 2rem;
+  }
+
+  .contact__description span{
+    color: var(--main-color);
+    font-weight: var(--font-bold);
+  }
+
+  .contact__data .line{
+    width: 100%;
+    border: dashed;
+    background-color: transparent;
+    color: var(--main-color);
+  }
+
+  .contact__info-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .info__title{
+    color: var(--main-color-alt);
+    font-family: var(--title-font);
+    font-size: var(--h1-font-size);
+    margin-bottom: .5rem;
+  }
+
+  .contact__button{
+    border: none;
+    width: 70px;
+    height: 70px;
+    border-radius: .75rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact__button i{
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+
+  .contact__open{
+    position: relative;
+    display: grid;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    padding: .5rem 1.5rem;
+    text-align: center;
+    background-color: transparent;
+    border: 4px solid var(--main-color);
+    border-radius: 1rem;
+  }
+
+  .open__title{
+    font-family: var(--title-font);
+    font-size: var(--big-font-size);
+    color: var(--main-color-alt);
+    margin-bottom: 1rem;
+  }
+
+  .open__description{
+    font-size: var(--h2-font-size);
+  }
