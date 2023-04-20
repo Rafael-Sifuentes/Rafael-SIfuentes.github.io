@@ -462,7 +462,7 @@ img{
     position: absolute;
     top: 0;
     height: 100%;
-    filter: brightness(10%);
+    filter: brightness(20%);
     z-index: -1;
     object-fit: cover;
   }
@@ -653,14 +653,12 @@ img{
   }
 
   .contact__subtitle{
-    font-size: var(--h3-font-size);
     margin-bottom: .5rem;
   }
 
   .contact__title{
     color: var(--main-color-alt);
     font-weight: var(--font-semi-bold);
-    font-size: var(--h1-font-size);
   }
 
   .contact__data{
@@ -668,6 +666,7 @@ img{
   }
 
   .contact__description{
+    font-size: var(--h3-font-size);
     margin-bottom: 2rem;
   }
 
