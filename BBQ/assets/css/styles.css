@@ -139,14 +139,6 @@ img{
   height: 3px;
 }
 
-/* .line::after{
-  content: '';
-  position: absolute;
-  background-color: var(--main-color);
-  width: 60px;
-  height: 2.5px;
-} */
-
 .main{
     overflow: hidden;
 }
@@ -291,6 +283,9 @@ img{
 
 
   /*=============== HOME ===============*/
+  .home{
+    position: relative;
+  }
   .home__container{
     padding: 4rem 0 3rem;
     gap: 2.5rem;
@@ -339,15 +334,12 @@ img{
 
   .home__img{
     position: absolute;
-    bottom: 0;
-    height: 100vh;
-    object-fit: cover;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    filter: brightness(20%);
     z-index: -1;
-    filter: brightness(60%);
-  }
-
-  .img__container{
-    position: relative;
+    object-fit: cover;
   }
 
   /*=============== ABOUT ===============*/
@@ -735,4 +727,60 @@ img{
 
   .open__description{
     font-size: var(--h2-font-size);
+  }
+
+
+
+  /*=============== BREAKPOINTS ===============*/
+  @media screen and (min-width: 567px){
+    .container{
+      margin-right: 3.5rem;
+      margin-left: 3.5rem;
+    }
+
+    .home__ctas{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+  }
+
+  @media screen and (min-width:767){
+    .nav__menu{
+      width: 100%;
+    }
+
+    .menu__item{
+      width: 100px;
+    }
+
+    .card__filters{
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .menu__items{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+  }
+
+  @media screen and (min-width: 1024px){
+    .container{
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section{
+      padding: 6rem 0 2rem;
+    }
+
+    .nav__menu{
+      width: 100%;
+    }
+
+    .menu__items{
+      grid-template-columns: repeat(3, 1fr);
+    }
+
   }

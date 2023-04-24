@@ -301,6 +301,7 @@
     border-radius: 4rem;
     padding: 1rem 2.25rem;
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     transition: .4s; /* for light mode animation */
   }
 
@@ -469,9 +470,9 @@
     font-size: var(--biggest-font-size);
   }
 
-  .home__img{
+  /* .home__img{
     width: 220px;
-  }
+  } */
 
   .home__handle{
     justify-self: center;
@@ -556,6 +557,16 @@
   .home__scroll-name{
     font-size: var(--smaller-font-size);
     transform: rotate(-90deg);
+  }
+
+  .home__image{
+    justify-self: center;
+  }
+
+  .home__blob{
+    width: 320px;
+    fill: var(--first-color);
+    filter: drop-shadow(0 12px 12px hsla(var(--first-hue), 100%, 40%, .2));
   }
   
   /*=============== BUTTONS ===============*/
@@ -1221,9 +1232,9 @@
       height: 400px;
     }
 
-    .home__img{
+    /* .home__img{
       width: 280px;
-    }
+    } */
 
     .home__social-link{
       padding: .4rem;
