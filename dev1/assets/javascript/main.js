@@ -34,3 +34,7 @@ const blurHeader = () => {
   
   window.addEventListener('scroll' , blurHeader)
   
+
+/*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById('contact-form'),
+      constMessage = document.getElementById('contact__input')

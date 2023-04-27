@@ -430,6 +430,7 @@ img{
     height: initial;
     background-color: rgba(0, 0, 0, 0.451);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 4px solid var(--main-color);
     padding: 6px;
     border-radius: .5rem;
@@ -746,7 +747,7 @@ img{
 
   }
 
-  @media screen and (min-width:767){
+  @media screen and (min-width: 767){
     .nav__menu{
       width: 100%;
     }
@@ -760,6 +761,11 @@ img{
     }
 
     .menu__items{
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about__container{
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
     
@@ -781,6 +787,7 @@ img{
 
     .menu__items{
       grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
     }
 
   }
