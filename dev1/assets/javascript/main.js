@@ -37,4 +37,40 @@ const blurHeader = () => {
 
 /*=============== EMAIL JS ===============*/
 const contactForm = document.getElementById('contact-form'),
-      constMessage = document.getElementById('contact__input')
+      contactMessage = document.getElementById('contact-message')
+
+const sendEmail = (e) =>{
+    e.preventDefault()
+
+    emailjs.sendForm('service_j6vt0nw', 'template_60qrmmg', '#contact-form', 'dXFPVcmf0brUMMXAc')
+        .then(() =>{
+            // show sent message
+            contactMessage.textContent = "Message sent succesfully ✅"
+        }, () =>{
+            contactMessage.textContent = 'Message not sent (Service Error)'
+        })
+}
+
+contactForm.addEventListener('submit',sendEmail)
+
+
+/*=============== SCROLL SECTIONS ACTIVE ===============*/
+const sections = document.querySelectorAll('section[id]')
+    
+const scrollActive = () =>{
+  	const scrollY = window.pageYOffset
+
+	sections.forEach(current =>{
+		const sectionHeight = current.offsetHeight,
+			  sectionTop = current.offsetTop - 58,
+			  sectionId = current.getAttribute('id'),
+			  sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+
+		if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+			sectionsClass.classList.add('active-link');
+		}else{
+			sectionsClass.classList.remove('active-link');
+		}                                                    
+	})
+}
+window.addEventListener('scroll', scrollActive)
