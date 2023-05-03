@@ -308,7 +308,7 @@ img{
   }
 
   .home__link i{
-    color: var(--main-color);
+    color: var(--main-color-alt);
   }
 
   .home__img{

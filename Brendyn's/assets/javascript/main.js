@@ -61,3 +61,30 @@ let mixerFeatured = mixitup('.menu__container', {
       duration: 300
   }
 });
+
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  distance: '60px',
+  duration: 2800,
+})
+
+sr.reveal(`.section__subtitle, .section__title, .home__titles, .nav__logo`,{
+  origin: 'top',
+  interval: 100,
+})
+
+sr.reveal(`.home__location, .home__ctas, .location__open, .nav__menu`,{
+  origin: 'bottom',
+  interval: 120,
+})
+
+sr.reveal(`.home__description, .about__description, .location__description, .info__title, .info__description`,{
+  origin: 'left',
+  interval: 120,
+})
+
+sr.reveal(`.location__button`,{
+  origin: 'right',
+  interval: 120,
+})
