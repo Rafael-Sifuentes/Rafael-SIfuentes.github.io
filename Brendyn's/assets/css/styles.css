@@ -461,6 +461,7 @@ img{
     width: 100%;
     z-index: -1;
     object-fit: cover;
+    filter: brightness(50%);
   }
 
   .menu__container{
@@ -495,6 +496,7 @@ img{
   }
 
   .card__description{
+    color: var(--body-color);
     font-size: var(--h2-font-size);
     font-family: var(--body-font);
   }
