@@ -150,7 +150,7 @@ img{
   position: relative;
 }
 
-/* .swiper,
+.swiper,
 .swiper-slide{
   display: inherit;
 }
@@ -158,7 +158,7 @@ img{
 .swiper-slide{
   width: auto !important;
   max-width: 100% !important;
-} */
+}
 
 /*=============== HEADER & NAV ===============*/
 .header{
@@ -265,6 +265,16 @@ img{
     line-height: 1.7rem;
   }
 
+  .home__open{
+    font-size: var(--h2-font-size);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .home__open span{
+    color: var(--main-color-alt);
+  }
+
   .home__location{
     margin-top: 2rem;
     font-size: var(--h2-font-size);
@@ -272,6 +282,7 @@ img{
 
   .home__location span{
     font-size: var(--normal-font-size);
+    color: var(--main-color-alt);
   }
 
   .home__socials{
@@ -586,6 +597,108 @@ img{
 
   .drinks-flex{
     display: flex;
+  }
+
+  /*=============== LOCATION ===============*/
+  .location{
+    padding-bottom: 6rem;
+    position: relative;
+  }
+
+  .location__bkgr{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    filter: brightness(50%);
+    object-fit: cover;
+  }
+
+  .location__subtitle,
+  .location__title{
+    text-align: center;
+  }
+
+  .location__title{
+    color: var(--main-color-alt);
+    font-weight: var(--font-semi-bold);
+  }
+
+  .location__data{
+    margin-bottom: 2rem;
+  }
+
+  .location__description{
+    font-size: var(--h3-font-size);
+    margin-bottom: 2rem;
+  }
+
+  .location__description span{
+    color: var(--main-color);
+    font-weight: var(--font-bold);
+  }
+
+  .location__data .line{
+    width: 100%;
+    border: dashed;
+    background-color: transparent;
+    color: var(--main-color);
+  }
+
+  .location__info-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .info__title{
+    color: var(--main-color-alt);
+    font-family: var(--title-font);
+    font-size: var(--h1-font-size);
+    margin-bottom: .5rem;
+  }
+
+  .location__button{
+    border: none;
+    width: 70px;
+    height: 70px;
+    border-radius: .75rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .location__button i{
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+
+  .location__open{
+    position: relative;
+    display: grid;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    padding: .5rem 1.5rem;
+    text-align: center;
+    background-color: transparent;
+    border: 4px solid var(--main-color);
+    border-radius: 1rem;
+  }
+
+  .open__title{
+    font-family: var(--title-font);
+    font-size: var(--big-font-size);
+    color: var(--main-color-alt);
+    margin-bottom: 1rem;
+  }
+
+  .open__description{
+    font-size: var(--h2-font-size);
   }
 
   /*=============== BREAKPOINTS ===============*/
