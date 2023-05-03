@@ -64,15 +64,15 @@ let mixerFeatured = mixitup('.menu__container', {
 
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
-const sr = ScrollReveal({
-  distance: '60px',
-  duration: 2800,
-})
+// const sr = ScrollReveal({
+//   distance: '60px',
+//   duration: 2800,
+// })
 
-sr.reveal(`.home__subtitle, .home__title, .home__description, .home__location, .nav__logo`,{
-  origin: 'top',
-  interval: 100,
-})
+// sr.reveal(`.home__subtitle, .home__title, .home__description, .home__location, .nav__logo`,{
+//   origin: 'top',
+//   interval: 100,
+// })
 
 // sr.reveal(`.section__subtitle, .section__title, .home__titles, .nav__logo`,{
 //   origin: 'top',
