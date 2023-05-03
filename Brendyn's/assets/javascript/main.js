@@ -69,22 +69,27 @@ const sr = ScrollReveal({
   duration: 2800,
 })
 
-sr.reveal(`.section__subtitle, .section__title, .home__titles, .nav__logo`,{
+sr.reveal(`.home__subtitle, .home__title, .home__description, .home__location, .nav__logo`,{
   origin: 'top',
   interval: 100,
 })
 
-sr.reveal(`.home__location, .home__ctas, .location__open, .nav__menu`,{
-  origin: 'bottom',
-  interval: 120,
-})
+// sr.reveal(`.section__subtitle, .section__title, .home__titles, .nav__logo`,{
+//   origin: 'top',
+//   interval: 100,
+// })
 
-sr.reveal(`.home__description, .about__description, .location__description, .info__title, .info__description`,{
-  origin: 'left',
-  interval: 120,
-})
+// sr.reveal(`.home__location, .home__ctas, .location__open, .nav__menu`,{
+//   origin: 'bottom',
+//   interval: 120,
+// })
 
-sr.reveal(`.location__button`,{
-  origin: 'right',
-  interval: 120,
-})
+// sr.reveal(`.home__description, .location__description, .info__title, .info__description`,{
+//   origin: 'left',
+//   interval: 120,
+// })
+
+// sr.reveal(`.location__button`,{
+//   origin: 'right',
+//   interval: 120,
+// })
