@@ -10,7 +10,7 @@ font-family: 'Open Sans', sans-serif; */
     /* colors */
     --main-color: #FF9028;
     --main-color-alt: #FFA857;
-    --body-color: #111111;
+    --body-color: #282828;
     --text-color: #fff;
     --text-color-alt:#000;
 
@@ -146,6 +146,12 @@ img{
   height: 3px;
 }
 
+.title__line{
+    width: 1500px;
+    height: 20px;
+    overflow: hidden;
+}
+
 /*=============== HEADER & NAV ===============*/
 
 .header{
@@ -235,6 +241,7 @@ img{
 /* Add blur to header */
 .blur-header{
     background-color: transparent;
+    transition: .3s;
 }
 
 .blur-header::after{
@@ -242,18 +249,19 @@ img{
     position: absolute;
     width: 1000%;
     height: 100%; 
-    background-color: hsla(0, 0%, 10%, .3);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    background-color: rgba(76, 76, 76, 0.617);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     top: 0;
     left: 0;
     z-index: -1;
+    transition: .3s;
 
 }
 
 /* Active link */
 .active-link{
-    color: var(--first-color);
+    color: var(--main-color);
 }
 
 .nav__button{
@@ -273,15 +281,17 @@ img{
 /*=============== HOME ===============*/
 .home{
     position: relative;
+    padding-bottom: 3rem;
 }
 
 .home__bkgr{
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     object-fit: cover;
     z-index: -1;
+    filter: blur(2px);
 }
 
 .home__container{
@@ -335,4 +345,78 @@ img{
     font-family: var(--title-font);
     font-size: var(--h3-font-size);
     font-weight: var(--font-bold);
+}
+
+/*=============== ABOUT ===============*/
+.about{
+    position: relative;
+    padding-bottom: 3.5rem;
+}
+
+.about__bkgr{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.about__container{
+    gap: 2.5rem;
+}
+
+.about__title{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about__description{
+    font-size: var(--normal-font-size);
+    margin-top: 2.5rem;
+}
+
+.about__description span{
+    color: var(--main-color-alt);
+}
+
+.about__services{
+    margin-top: 2.5rem;
+}
+
+.about__services ul{
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+}
+
+.service__item{
+    font-weight: var(--font-bold);
+    font-size: var(--h3-font-size);
+    display: flex;
+    align-items: center;
+}
+
+.service__item i{
+    color: var(--main-color);
+    margin-right: .2rem;
+}
+
+.about__button-cont{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 2.5rem;
+}
+
+.about__button{
+    background-color: transparent;
+    border: 4px solid var(--main-color);
+    border-radius: 0;
+}
+
+.about__button a{
+    color: var(--text-color);
+    font-size: var(--h2-font-size);
 }
