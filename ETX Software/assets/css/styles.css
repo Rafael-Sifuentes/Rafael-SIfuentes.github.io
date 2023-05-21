@@ -171,6 +171,16 @@ img{
     font-weight: var(--font-semi-bold);
   }
 
+  .square__bkgr{
+    position: absolute;
+    z-index: -1;
+  }
+
+  .circle__bkgr{
+    position: absolute;
+    z-index: -1;
+  }
+
 .main{
     overflow: hidden;
 }
@@ -225,7 +235,7 @@ img{
       .nav__menu{
         position: fixed;
         bottom: 0;
-        background-color: rgba(88, 73, 93, 0.625);
+        background-color: rgba(63, 63, 63, 0.625);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         width: 100%;
@@ -233,7 +243,7 @@ img{
         right: 0;
         margin: 0 auto;
         padding: 1.8rem 2.8rem;
-        border-radius: 1.5rem 1.5rem 0 0;
+        border-radius: 1rem 1rem 0 0;
       }
   
       .nav__logo{
@@ -255,7 +265,7 @@ img{
       }
   
       .nav__link i{
-          font-size: 2rem;
+          font-size: 1.5rem;
       }
   
       .nav__link span{
@@ -371,6 +381,12 @@ img{
   position: relative;
 }
 
+.about .square__bkgr{
+  max-width: 250px;
+  left: 0;
+  top: -5%;
+}
+
 .about__data{
   position: relative;
   display: flex;
@@ -428,6 +444,12 @@ img{
   gap: .5rem;
 }
 
+.about__modal .circle__bkgr{
+  right: -50%;
+  max-width: 350px;
+  opacity: .7;
+}
+
 .about__modals li:nth-child(2){
   align-items: flex-end;
   text-align: end;
@@ -477,8 +499,14 @@ img{
   color: rgba(255, 255, 255, 0.199);
   position: absolute;
   right: 0;
-  top: 30%;
+  top: 20%;
   z-index: -1;
+}
+
+.projects__container .square__bkgr{
+  left: -50%;
+  top: 0;
+  max-width: 350px;
 }
 
 .projects__title{
@@ -504,7 +532,7 @@ img{
 
 .project__modal{
   position: relative;
-  width: 275px;
+  width: 300px;
   height: 150px;
   background-color: var(--secondary-color);
   padding: 1rem 1.2rem 3rem .7rem;
@@ -637,6 +665,7 @@ img{
 
 .contact__description{
   text-align: end;
+  font-size: var(--h3-font-size);
 }
 
 .contact__description span:nth-child(1){
