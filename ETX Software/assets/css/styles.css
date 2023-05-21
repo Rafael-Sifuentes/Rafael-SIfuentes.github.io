@@ -718,3 +718,38 @@ input, textarea {
   font-family: var(--body-font);
   font-weight: var(--font-semi-bold);
 }
+
+/*=============== FOOTER ===============*/
+.footer{
+  padding-bottom: 7rem;
+  background: linear-gradient(to right, hsla(253, 93%, 53%, .3), hsla(284, 58%, 51%, .3));
+  backdrop-filter: blur(20px); /* Adjust the blur amount as needed */
+  -webkit-backdrop-filter: blur(20px); /* For Safari support */
+  background-clip: padding-box; /* Keep the background within the padding box */
+}
+
+.footer__container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer__title,
+.footer__copy{
+  text-align: center;
+}
+
+.footer__title span{
+  color: var(--primary-color);
+}
+
+.footer__title span:nth-child(2){
+  color: var(--accent-color);
+}
+
+.footer__copy{
+  font-weight: var(--font-regular);
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
