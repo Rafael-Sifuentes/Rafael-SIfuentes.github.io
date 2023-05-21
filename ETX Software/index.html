@@ -93,7 +93,7 @@
      
                              <button class="button-alt home__button-alt">
                                  <img src="assets/IMG/button-alt.svg" alt="">
-                                 <a href="">See Projects</a>
+                                 <a href="#projects">See Projects</a>
                              </button>
                         </div>
 
@@ -353,30 +353,54 @@
 
                 <form class="contact-form">
                     <div class="form-group">
-                      <label for="name">Name</label>
-                      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                      <input type="text" id="name" name="name" class="form__text" placeholder="Name" required>
                       <div class="underline"></div>
                     </div>
                   
                     <div class="form-group">
-                      <label for="phone">Phone</label>
-                      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                      <input type="tel" id="phone" name="phone" class="form__text" placeholder="Phone Number" required>
                       <div class="underline"></div>
                     </div>
                   
                     <div class="form-group">
-                      <label for="email">Email</label>
-                      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                      <input type="email" id="email" name="email" class="form__text" placeholder="Email" required>
                       <div class="underline"></div>
                     </div>
                   
                     <div class="form-group">
-                      <label for="description">Project Description</label>
-                      <textarea id="description" name="description" placeholder="What do you have in mind ?" required></textarea>
+                        <label for="description"  class="form__text-alt">What do you have in mind ?</label>
+                      <textarea id="description" name="description" placeholder="" required></textarea>
                       <div class="underline"></div>
                     </div>
+
+                    <div class="btn__cont">
+
+                        <ul class="socials">
+                            <li class="social__link">
+                                <a href="https://www.instagram.com/el_m3ndigo/" target="_blank">
+                                    <i class='bx bxl-instagram social__i' ></i>
+                                </a>
+                            </li>
+
+                            <li class="social__link">
+                                <a href="">
+                                    <i class='bx bxl-snapchat social__i' ></i>
+                                </a>
+                            </li>
+
+                            <li class="social__link">
+                                <a href="https://github.com/Rafael-Sifuentes/rafael-sifuentes.github.io" target="_blank ">
+                                    <i class='bx bxl-github social__i' ></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div>
+                            <button type="submit" class="button contact__button">Send form</button>
+                        </div>
+                    </div>
                   
-                    <button type="submit" class="button contact__button">Send form</button>
+                    
                 </form>
                   
             </div>

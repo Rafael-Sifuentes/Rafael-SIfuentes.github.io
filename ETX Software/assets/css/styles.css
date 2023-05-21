@@ -225,13 +225,15 @@ img{
       .nav__menu{
         position: fixed;
         bottom: 0;
-        background-color: var(--secondary-color);
+        background-color: rgba(88, 73, 93, 0.625);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         width: 100%;
         left: 0;
         right: 0;
         margin: 0 auto;
         padding: 1.8rem 2.8rem;
-        border-radius: .5rem .5rem 0 0;
+        border-radius: 1.5rem 1.5rem 0 0;
       }
   
       .nav__logo{
@@ -253,7 +255,7 @@ img{
       }
   
       .nav__link i{
-          font-size: 1.7rem;
+          font-size: 2rem;
       }
   
       .nav__link span{
@@ -436,7 +438,7 @@ img{
 }
 
 .about__modal-description{
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
 }
 
 .about__button{
@@ -465,7 +467,7 @@ img{
 
 /*=============== PROJECTS ===============*/
 .projects{
-  padding-bottom: 5rem;
+  padding-bottom: 2.5rem;
   position: relative;
 }
 
@@ -530,6 +532,7 @@ img{
 .work__container{
   position: relative;
   margin-bottom: 3.5rem;
+  width: 100%;
 }
 
 .work__description{
@@ -666,8 +669,22 @@ img{
   margin: 0 auto;
 }
 
+.form__text::placeholder{
+  color: rgba(255, 255, 255, 0.408);
+  font-family: var(--body-font);
+  font-weight: var(--font-regular);
+  font-size: var(--normal-font-size);
+}
+
+.form__text-alt{
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 label {
@@ -689,8 +706,15 @@ input, textarea {
   background-color: #ccc;
 }
 
+.btn__cont{
+  margin-top: 3rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .contact__button{
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: var(--body-font);
   font-weight: var(--font-semi-bold);
 }
