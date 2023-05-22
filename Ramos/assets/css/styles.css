@@ -188,7 +188,7 @@ img{
 }
 
 .logo{
-    width: 270px;
+    width: max-content;
 }
 
 .home__data{
@@ -250,6 +250,93 @@ img{
 
 .home__social-link i{
     font-size: var(--big-font-size);
+}
+
+.policy__modal{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 20;
+    transition: .4s;
+}
+
+.policy__modal-content{
+    position: relative;
+    background-color: white;
+    padding: 3.5rem 2rem 2.5rem;
+    border-radius: 1rem;
+}
+
+.policy__header{
+    display: flex;
+    flex-direction: column;
+    column-gap: 1.5rem;
+    text-align: initial;
+    margin-bottom: 3rem;
+}
+
+.policy__subtitle{
+    font-size: var(--normal-font-size);
+    font-family: var(--cursive-font);
+}
+
+.policy__title{
+    font-size: var(--h2-font-size);
+    margin-bottom: 1rem;
+}
+
+.policy__title-alt{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.policy__header .line{
+    width: 100%;
+}
+
+.policy__list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: initial;
+}
+
+.policy__item{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.policy__circle{
+    font-size: 1rem;
+    color: var(--main-color);
+}
+
+.policy__description{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-regular);
+}
+
+.policy__description span{
+    font-weight: var(--font-bold);
+}
+
+.policy__modal-close{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+
+/*Active modal*/
+.active-modal{
+    opacity: 1;
+    visibility: visible;
 }
 
 /*=============== ABOUT ===============*/

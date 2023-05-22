@@ -23,3 +23,27 @@ var swiper = new Swiper(".featured__container", {
 
     
   });
+
+
+/*=============== POLICY MODAL ===============*/
+const modalViews = document.querySelectorAll('.policy__modal'),
+      modalBtns = document.querySelectorAll('.home__policy'),
+      modalClose = document.querySelectorAll('.policy__modal-close')
+
+let modal = function(modalClick){
+    modalViews[modalClick].classList.add('active-modal')
+}
+
+modalBtns.forEach((mb, i) =>{
+    mb.addEventListener('click', () =>{
+        modal(i)
+    })
+})
+
+modalClose.forEach((mc) => {
+    mc.addEventListener('click', () => {
+        modalViews.forEach((mv) =>{
+            mv.classList.remove('active-modal')
+        })
+    })
+})
