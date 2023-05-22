@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Great+Vibes&family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
 
 /* font-family: 'Abril Fatface', cursive;
 font-family: 'Montserrat', sans-serif; */
@@ -10,13 +11,15 @@ font-family: 'Montserrat', sans-serif; */
 
     /* colors */
     --main-color: #FED2A8;
-    --main-color-alt: #FEA8A8;
+    --main-color-alt: #ffcfa5;
     --body-color: #FFE7D9;
     --text-color: #000000;
     --text-color-alt:#ffffff;
+    --primary-color: #4717F7;
+    --accent-color: #A43ACB;
 
     /* Font and Typography */
-    --body-font: 'Montserrat', cursive;
+    --body-font: 'Montserrat',;
     --title-font: 'Abril Fatface', sans-serif;
     --cursive-font: 'Great Vibes';
     --biggest-font-size: 2.7rem;
@@ -357,3 +360,58 @@ img{
     height: 10px;
     border-radius: 1rem;
   }
+
+
+  /*=============== ETX ===============*/
+.etx{
+    background-color: #000;
+    padding-bottom: 4rem;
+}
+
+.etx__title{
+    font-family: 'Oswald';
+    font-size: var(--h1-font-size);
+    color: var(--text-color-alt);
+}
+
+.etx__name{
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-bold);
+    font-family: var(--body-font);
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+}
+
+.etx__description{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    font-family: var(--body-font);
+    color: var(--text-color-alt);
+}
+
+.etx__btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.etx__button{
+    background-color: var(--primary-color);
+    padding: .5rem 1rem;
+    height: 75px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: .5rem;
+}
+
+.etx__button a{
+    color: var(--text-color-alt);
+    font-size: var(--h1-font-size);
+    font-family: var(--body-font);
+}
