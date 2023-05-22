@@ -11,6 +11,7 @@ font-family: 'Open Sans', sans-serif; */
     --main-color: #FF9028;
     --main-color-alt: #FFA857;
     --body-color: #151515;
+    --body-color-alt: #111111;
     --text-color: #fff;
     --text-color-alt:#000;
 
@@ -431,4 +432,41 @@ img{
 .about__button a{
     color: var(--text-color);
     font-size: var(--h2-font-size);
+}
+
+/*=============== SERVICES ===============*/
+.services{
+    background-color: var(--body-color-alt);
+}
+
+.services__title{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 3rem;
+}
+
+.services__modals{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.service__modal{
+    position: relative;
+    height: 250px;
+    max-width: 300px;
+    padding: 5rem 3rem 0 1rem;
+    background-color: #000;
+    border: 3px solid var(--main-color);
+}
+
+.services__img{
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    transform: translateX(-50%);
+    max-width: 230px;
 }
