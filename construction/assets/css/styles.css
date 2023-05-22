@@ -462,16 +462,16 @@ img{
     position: relative;
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    max-width: 100%;
 }
 
 .modal__img{
     position: relative;
-    height: 150px;
+    height: 175px;
 }
 
 .modal__description{
-    padding: 2.5rem 5rem 1.5rem 1rem;
+    padding: 3.5rem 5rem 1.5rem 1rem;
     border: 3px solid var(--main-color);
     background-color: #000;
 }
@@ -481,7 +481,7 @@ img{
     left: 50%;
     top: 0;
     transform: translateX(-50%);
-    max-width: 230px;
+    max-width: 275px;
 }
 
 /*=============== ETX ===============*/
