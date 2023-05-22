@@ -565,6 +565,7 @@ img{
 
 .work__description{
   margin-top: .5rem;
+  font-size: var(--smaller-font-size);
 }
 
 .work__button{
