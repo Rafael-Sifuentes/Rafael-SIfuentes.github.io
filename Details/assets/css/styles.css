@@ -266,7 +266,8 @@
     object-position: 43%;
     z-index: -1;
     transition: .4s;
-    filter: brightness(70%);
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
   }
 
   .home-scale{

@@ -70,3 +70,27 @@ var swiper = new Swiper(".work__container", {
 
     
   });
+
+
+/*=============== SCROLL REVEAL JS ===============*/
+const sr = ScrollReveal({
+  distance: '80px',
+  duration: 2800,
+  // reset: true,
+})
+
+sr.reveal(`.section__title, .about__icon`,{
+  origin: 'top',
+})
+
+sr.reveal(`.description, .about__img`,{
+  origin: 'bottom',
+})
+
+sr.reveal(`.home__subtitle, .modal__title, .contact__bkgr, .wrapper-1`,{
+  origin: 'left',
+})
+
+sr.reveal(`.socials, .projects__bkgr`,{
+  origin: 'right',
+})
