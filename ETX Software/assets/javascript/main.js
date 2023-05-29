@@ -33,22 +33,40 @@ window.addEventListener('scroll', scrollActive)
 
 /*==================== SWIPER ====================*/
 var swiper = new Swiper(".work__container", {
+
+  
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: "auto",
+    slidesPerView: 1,
     loop: true,
 
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
-  },
+    },
+
     spaceBetween: 22,
     coverflowEffect: {
       rotate: 20,
       slideShadows: true,
       depth: 100,
     },
+
+    breakpoints:{
+      700: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+      },
+    }
 
     
   });
