@@ -99,12 +99,12 @@ sr.reveal(`.socials, .projects__bkgr, .portal__bkgr`,{
 var userCredentials = {
   admin1: {
     password: "El mendigo",
-    htmlFile: "assets/dash.html"
+    htmlFile: "Dashboard/dash.html"
   },
 
   user2: {
     password: "pass2",
-    htmlFile: "dash.html"
+    htmlFile: "Dashboard/dash.html"
   },
 
   user3: {

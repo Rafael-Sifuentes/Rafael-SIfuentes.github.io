@@ -38,3 +38,23 @@ function updateTime() {
 }
 
 window.addEventListener('scroll' , scrollHeader)
+
+
+/*=============== SCROLL REVEAL JS ===============*/
+const sr = ScrollReveal({
+  distance: '80px',
+  duration: 2800,
+  // reset: true,
+})
+
+sr.reveal(`.greeting, .client__logo, .module__title, .client__domain`,{
+  origin: 'bottom',
+})
+
+sr.reveal(`.date__container`,{
+  origin: 'left',
+})
+
+sr.reveal(`.statistic__module`,{
+  origin: 'top',
+})
