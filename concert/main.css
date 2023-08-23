@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+:root{
+
+    /* == FONT & TYPOGRAPHY == */
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font: 2.7rem;
+    --big-font-size: 2.5rem;
+    --title-font-size: 2.3rem;
+    --h1-font-size: 1.8rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.2rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    /* ================= */
+    /* =========Z INDEX======== */
+    --z-fixed: 10;
+    /* ================= */
+}
+
+/* == RESPONSIVE FONT & TYPOGRAPHY == */
+@media screen and (min-width: 1024px) {
+    :root {
+      --biggest-font-size: 4rem;
+      --big-font-size: 3.2rem;
+      --title-size: 2.7rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+  }
+/* -================================= BASE ================================- */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #1C1C1C;
+    font-family: var(--body-font);
+}
+
+h1, h2, h3{
+    font-weight: var(--font-semi-bold);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 965px;
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+}
+
+.main{
+    padding-top: 8rem;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5.5rem;
+    background-color: #FF701F;
+    z-index: var(--z-fixed);
+}
+
+.nav{
+    height: 5.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    color: white;
+}
+
+.logo{
+    width: 110px;
+    height: 80px;
+}
+
+.logo span{
+    font-weight: var(--font-light);
+}
+
+.nav__menu i{
+    font-size: var(--h1-font-size);
+}
+
+.top__title{
+    font-size: var(--h3-font-size);
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.event__card{
+    position: relative;
+    width: 100%;
+    height: 900px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.pic{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.card__info{
+    padding: 0 1rem;
+}
+
+.event__title{
+    font-weight: var(--font-medium);
+}
+
+.card__info div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.seats{
+    font-size: var(--normal-font-size);
+}
+
+.qr__holder{
+    position: relative;
+    width: 90%;
+    height: 250px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF701F;
+}
+
+.code__bkgr img{
+    width: 100%;
+    height: 100%;
+}
+
+.event__button{
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: max-content;
+    padding: 1rem 1.5rem;
+    background-color: #FF701F;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1.5rem;
+}
+
+.event__action{
+    font-size: var(--h3-font-size);
+}
+
+.event__button i{
+    font-size: var(--h1-font-size);
+}
